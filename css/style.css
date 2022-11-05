@@ -70,7 +70,7 @@
 }
 
 .color1{
-    background-color: #1a1a1a;		
+    background-color: #1c2226;		
 }
     
 .imgS:hover{
@@ -82,4 +82,57 @@
     background-color: black;
     border-radius: 30px;	
     padding: 10px 10px 10px 10px;
+    color:white;
+    display: flex;
+    justify-content: center;
+}
+
+.Introduzione-Title {
+    font-size: 60.8px;
+    line-height: 62.8px;
+    margin: 0;
+    font-weight: 600;
+    padding: 10px 0px 10px 0px;
+    color: #828e9e;
+}
+
+.Contenitore-Title{
+    display: flex;
+    justify-content: center;
+}
+
+.Contenitore-Spiegazione{
+    border-radius: 10px;
+    background-color: #1c2226;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    box-shadow:  5px 5px 5px 5px #6d5c5c;
+    letter-spacing: .3px;
+}
+
+.sh-box{
+    box-shadow:  3px 3px 3px 3px #6d5c5c;
+}
+
+.Centra-Testo{
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+
+h1{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black!important;
+}
+
+h5{
+    color:white!important;
+}
+
+.mt-6{
+    margin-top: 300px;
+}
+
+.mt-In{
+    margin-top: 100px;
 }
