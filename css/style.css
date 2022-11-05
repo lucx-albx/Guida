@@ -410,4 +410,11 @@ h5{
 }
 
 /* FINE CREAZIONE TABELLONE */
+.aJSad{
+    text-decoration: none; 
+    color: white;
+}
 
+.aJSad:hover{
+    color: white;
+}
