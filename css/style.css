@@ -99,6 +99,7 @@
 .Contenitore-Title{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .Contenitore-Spiegazione{
@@ -106,7 +107,7 @@
     background-color: #1c2226;
     color: white;
     padding: 10px 0px 10px 0px;
-    box-shadow:  5px 5px 5px 5px #6d5c5c;
+    box-shadow:  3px 3px 3px 3px #6d5c5c;
     letter-spacing: .3px;
 }
 
@@ -127,10 +128,6 @@ h1{
 
 h5{
     color:white!important;
-}
-
-.mt-6{
-    margin-top: 300px;
 }
 
 .mt-In{
@@ -156,4 +153,11 @@ h5{
         padding: 10px 0px 10px 0px;
         color: #828e9e;
     }
+}
+
+.b{
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
 }
