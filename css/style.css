@@ -138,5 +138,22 @@ h5{
 }
 
 .rid-Em{
-    font-size: 12px;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 570px) {
+    .rid-Em{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .Introduzione-Title {
+        font-size: 45.8px;
+        line-height: 62.8px;
+        margin: 0;
+        font-weight: 600;
+        padding: 10px 0px 10px 0px;
+        color: #828e9e;
+    }
 }
