@@ -362,6 +362,10 @@ h5{
         width: 750px;
         box-shadow:  3px 3px 3px 3px #6d5c5c;
     }
+
+    .Rid-Txt-Des{
+        font-size: 11px;
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -407,14 +411,11 @@ h5{
     .rid-Em{
         font-size: 9.5px;
     }
+
+    .Rid-Txt-Des{
+        font-size: 9.5px;
+    }
 }
 
 /* FINE CREAZIONE TABELLONE */
-.aJSad{
-    text-decoration: none; 
-    color: white;
-}
 
-.aJSad:hover{
-    color: white;
-}
