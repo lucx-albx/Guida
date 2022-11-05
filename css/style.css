@@ -161,3 +161,233 @@ h5{
     display: flex;
     justify-content: center;
 }
+
+/* CREAZIONE TABELLONE */
+
+.cerchio1{
+    border-radius: 50%;
+    background-color: #828e9e;
+    height: 50px;
+    width: 50px;
+    box-shadow:  3px 3px 3px 3px #6d5c5c;
+}
+
+.buco1{
+    border-radius: 50%;
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    box-shadow:  3px 3px 3px 3px #6d5c5c;
+}
+
+.cerchio2{
+    border-radius: 50%;
+    background-color: #828e9e;
+    height: 50px;
+    width: 50px;
+    box-shadow:  3px 3px 3px 3px #6d5c5c;
+}
+
+.buco2{
+    border-radius: 50%;
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    box-shadow:  3px 3px 3px 3px #6d5c5c;
+}
+
+.catena1{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #828e9e;
+    height: 200px;
+    width: 20px;
+    box-shadow:  3px 3px 3px 3px #6d5c5c;
+}
+
+.catena2{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #828e9e;
+    height: 200px;
+    width: 20px;
+    box-shadow:  3px 3px 3px 3px #6d5c5c;
+}
+
+.Tabellone{
+    border-radius: 20px;
+    background-color: #1c2226;
+    height: 400px;
+    width: 750px;
+    box-shadow:  3px 3px 3px 3px #6d5c5c;
+}
+
+.Introduzione-Title2 {
+    font-size: 45.8px;
+    line-height: 62.8px;
+    margin: 0;
+    font-weight: 600;
+    padding: 10px 0px 10px 0px;
+    color: white;
+}
+
+/* TABELLONE RESPONSIVE */
+
+@media screen and (max-width: 1100px){
+    .Introduzione-Title2 {
+        font-size: 35.8px;
+        line-height: 62.8px;
+        margin: 0;
+        font-weight: 600;
+        padding: 10px 0px 10px 0px;
+        color: white;
+    }
+
+    .catena1{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #828e9e;
+        height: 100px;
+        width: 20px;
+        box-shadow:  3px 3px 3px 3px #6d5c5c;
+    }
+    
+    .catena2{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #828e9e;
+        height: 100px;
+        width: 20px;
+        box-shadow:  3px 3px 3px 3px #6d5c5c;
+    }
+
+    .Tabellone{
+        border-radius: 20px;
+        background-color: #1c2226;
+        height: 200px;
+        width: 750px;
+        box-shadow:  3px 3px 3px 3px #6d5c5c;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .Introduzione-Title2 {
+        font-size: 25.8px;
+        line-height: 62.8px;
+        margin: 0;
+        font-weight: 600;
+        padding: 10px 0px 10px 0px;
+        color: white;
+    }
+
+    .catena1{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #828e9e;
+        height: 100px;
+        width: 20px;
+        box-shadow:  3px 3px 3px 3px #6d5c5c;
+    }
+    
+    .catena2{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #828e9e;
+        height: 100px;
+        width: 20px;
+        box-shadow:  3px 3px 3px 3px #6d5c5c;
+    }
+
+    .Tabellone{
+        border-radius: 20px;
+        background-color: #1c2226;
+        height: 200px;
+        width: 750px;
+        box-shadow:  3px 3px 3px 3px #6d5c5c;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Introduzione-Title2 {
+        font-size: 18.8px;
+        line-height: 62.8px;
+        margin: 0;
+        font-weight: 600;
+        padding: 10px 0px 10px 0px;
+        color: white;
+    }
+
+    .catena1{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #828e9e;
+        height: 50px;
+        width: 20px;
+        box-shadow:  3px 3px 3px 3px #6d5c5c;
+    }
+    
+    .catena2{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #828e9e;
+        height: 50px;
+        width: 20px;
+        box-shadow:  3px 3px 3px 3px #6d5c5c;
+    }
+
+    .Tabellone{
+        border-radius: 20px;
+        background-color: #1c2226;
+        height: 100px;
+        width: 750px;
+        box-shadow:  3px 3px 3px 3px #6d5c5c;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .Introduzione-Title2 {
+        font-size: 12.8px;
+        line-height: 62.8px;
+        margin: 0;
+        font-weight: 600;
+        padding: 10px 0px 10px 0px;
+        color: white;
+    }
+
+    .catena1{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #828e9e;
+        height: 50px;
+        width: 20px;
+        box-shadow:  3px 3px 3px 3px #6d5c5c;
+    }
+    
+    .catena2{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #828e9e;
+        height: 50px;
+        width: 20px;
+        box-shadow:  3px 3px 3px 3px #6d5c5c;
+    }
+
+    .Tabellone{
+        border-radius: 20px;
+        background-color: #1c2226;
+        height: 100px;
+        width: 750px;
+        box-shadow:  3px 3px 3px 3px #6d5c5c;
+    }
+
+    .Centra-Testo{
+        font-size: 10.8px;
+    }
+
+    .rid-Em{
+        font-size: 9.5px;
+    }
+}
+
+/* FINE CREAZIONE TABELLONE */
+
