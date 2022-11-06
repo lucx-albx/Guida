@@ -258,62 +258,23 @@ h5{
 }
 
 @keyframes AnimateCatena{
-    0%   {right:0px; top:0px;}
-    1%   {right:1px; top:0px;}
-    2%   {right:2px; top:0px;}
-    3%   {right:3px; top:0px;}
-    4%   {right:4px; top:0px;}
-    5%   {right:5px; top:0px;}
-    10%  {right:10px; top:0px;}
-    15%  {left:15px; top:-3px;}
-    30%  {left:30px; top:-5px;}
-    45%  {left:35px; top:-10px;}
+    0%   {left:0px; top:0px;}
+    25%  {left:45px; top:-12px;}
+    50%  {left:45px; top:-12px;}
+    100%  {left:0px; top:0px;}
 
-    60%  {left:35px; top:-10px;}
-    75%  {left:30px; top:-5px;}
-    90%  {left:15px; top:0px;}
-    95%  {left:5px; top:0px;}
-    96%  {left:4px; top:0px;}
-    97%  {left:3px; top:0px;}
-    98%  {left:2px; top:0px;}
-    99%  {left:1px; top:0px;}
-    100% {right:0px; top:0px;}
-    100% {left:-5px; top:0px;}
-
-    0% {transform: rotate(360deg)}
-    15% {transform: rotate(350deg)}
-    30% {transform: rotate(340deg)}
-    45% {transform: rotate(335deg)}
-
-    60% {transform: rotate(335deg)}
-    75% {transform: rotate(340deg)}
-    90% {transform: rotate(350deg)}
-    100% {transform: rotate(365deg)}
+    0%   {transform: rotate(360deg)}
+    25%  {transform: rotate(330deg)}
+    50%  {transform: rotate(330deg)}
+    100%  {transform: rotate(360deg)}
 
 }
 
 @keyframes AnimateTabellone {
-    0%   {right:0px; top:0px;}
-    1%   {right:1px; top:0px;}
-    2%   {right:2px; top:0px;}
-    3%   {right:3px; top:0px;}
-    4%   {right:4px; top:0px;}
-    5%   {right:5px; top:0px;}
-    10%  {right:10px; top:0px;}
-    15%  {left:15px; top:-3px;}
-    30%  {left:30px; top:-5px;}
-    45%  {left:45px; top:-10px;}
-
-    60%  {left:45px; top:-10px;}
-    75%  {left:30px; top:-5px;}
-    90%  {left:15px; top:0px;}
-    95%  {left:10px; top:0px;}
-    96%  {left:5px; top:0px;}
-    97%  {left:4px; top:0px;}
-    98%  {left:3px; top:0px;}
-    99%  {left:2px; top:0px;}
-    100% {right:0px; top:0px;}
-
+    0%   {left:0px; top:0px;}
+    25%  {left:80px; top:0px;}
+    50%  {left:80px; top:0px;}
+    100%  {left:0px; top:0px;}
 }
 
 .Introduzione-Title2 {
@@ -364,37 +325,23 @@ h5{
     }
 
     @keyframes AnimateCatena{
-        0%   {right:0px; top:0px;}
-        1%   {right:1px; top:0px;}
-        2%   {right:2px; top:0px;}
-        3%   {right:3px; top:0px;}
-        4%   {right:4px; top:0px;}
-        5%   {right:5px; top:0px;}
-        10%  {right:7px; top:0px;}
-        15%  {left: 9px; top:0px;}
-        30%  {left:12px; top:0px;}
-        45%  {left:15px; top:0px;}
+        0%   {left:0px; top:0px;}
+        25%  {left:20px; top:-6px;}
+        50%  {left:20px; top:-6px;}
+        100%  {left:0px; top:0px;}
     
-        60%  {left:15px; top:0px;}
-        75%  {left:12px; top:0px;}
-        90%  {left:9px; top:0px;}
-        95%  {left:7px; top:0px;}
-        96%  {left:4px; top:0px;}
-        97%  {left:3px; top:0px;}
-        98%  {left:2px; top:0px;}
-        99%  {left:1px; top:0px;}
-        100% {right:0px; top:0px;}
+        0%   {transform: rotate(360deg)}
+        25%  {transform: rotate(330deg)}
+        50%  {transform: rotate(330deg)}
+        100%  {transform: rotate(360deg)}
     
-        0% {transform: rotate(360deg)}
-        15% {transform: rotate(350deg)}
-        30% {transform: rotate(340deg)}
-        45% {transform: rotate(335deg)}
-    
-        60% {transform: rotate(335deg)}
-        75% {transform: rotate(340deg)}
-        90% {transform: rotate(350deg)}
-        100% {transform: rotate(365deg)}
-    
+    }
+
+    @keyframes AnimateTabellone {
+        0%   {left:0px; top:0px;}
+        25%  {left:40px; top:0px;}
+        50%  {left:40px; top:0px;}
+        100%  {left:0px; top:0px;}
     }
     
 }
