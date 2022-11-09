@@ -93,7 +93,8 @@
     margin: 0;
     font-weight: 600;
     padding: 10px 0px 10px 0px;
-    color: #828e9e;
+    color: #61dafb;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .Contenitore-Title{
@@ -146,12 +147,12 @@ h5{
 
 @media screen and (max-width: 570px) {
     .Introduzione-Title {
-        font-size: 45.8px;
+        font-size: 35.8px;
         line-height: 62.8px;
         margin: 0;
         font-weight: 600;
         padding: 10px 0px 10px 0px;
-        color: #828e9e;
+        color: #61dafb;
     }
 }
 
@@ -250,7 +251,7 @@ h5{
     width: 750px;
     box-shadow:  3px 3px 3px 3px #6d5c5c;
     margin-top: -35px;
-    border: 8px solid rgb(2, 2, 7);
+    border: 2px solid #61dafb;
     position: relative;
     animation-name: AnimateTabellone;
     animation-duration: 1.5s;
@@ -419,9 +420,6 @@ h5{
         box-shadow:  3px 3px 3px 3px #6d5c5c;
     }
 
-    .Rid-Txt-Des{
-        font-size: 11px;
-    }
 }
 
 @media screen and (max-width: 380px) {
@@ -468,10 +466,102 @@ h5{
         font-size: 9.5px;
     }
 
-    .Rid-Txt-Des{
-        font-size: 9.5px;
-    }
 }
 
 /* FINE CREAZIONE TABELLONE */
 
+.Code_Style{
+    background: #1c2226;
+    border-left: 5px solid #61dafb;
+    border-radius: 5px;
+    color: #f7f7f7;
+    display: block;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0px;
+}
+
+.orange{
+    color: #cca11b
+}
+
+.green{
+    color: #6cad72
+}
+
+.blue{
+    color: #19539c
+}
+
+.purple{
+    color: #826ed9
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #272f35;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+    width: 2px;
+    background-color: none;
+}
+
+body{
+    background-color: #323b41!important;
+}
+
+.SubTitle{
+    border-left: 2px solid #61dafb;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: start;
+}
+
+.Subtext{
+    font-family: arial;
+    font-size: 20px;
+    color: white;
+    margin-left: 10px;
+}
+
+.Intro-Centarta{
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.typing-effect{
+    width: 22ch;
+    animation: typing 2s steps(22), effect .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 1.3em;
+}
+
+@keyframes typing{
+    from{
+        width: 0
+    }
+}
+
+@keyframes effect{
+    50%{
+        border-color: transparent;
+    }
+}

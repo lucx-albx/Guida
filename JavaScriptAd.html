@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <!-- Nav Bar -->
@@ -54,33 +55,36 @@
             </div>
         </div>
 
-            <div class="row Contenitore-Title">
-                <h1 class="Introduzione-Title " style="text-align:center;"><font face="cursive">Cos'è JavaScript Avanzato? </font> </h1>
+            <div class="row Contenitore-Title" data-aos="fade-up-right">
+                <h1 class="Introduzione-Title " style="text-align:center;"><font>Cos'è JavaScript Avanzato? </font> </h1>
             </div>
+
+            <div class="SubTitle" ><strong class="Subtext typing-effect">JavaScript Avanzato</strong></div>
     
-            <div class="row d-flex justify-content-center">
-                <div class="col-4 Contenitore-Spiegazione mt-3">
+            <div class="row d-flex justify-content-center" data-aos="fade-up-right">
+                <div class="col-11 Contenitore-Spiegazione mt-3">
                     <p class="Centra-Testo"> 
                         JavaScript Avanzato è un modulo che, oltre a insegnarti 
                         le caratteristiche principali della programmazione a oggetti in JavaScript, 
                         ti insegnerà ES6 (ECMAScript 6 - l'ultima versione di JavaScript) 
                     </p>
                 </div>
-                <div class="col-4"></div>
             </div>
 
-            <div class="row d-flex justify-content-center mt-In">
-                <div class="col-4"></div>
-    
-                <div class="col-4 Contenitore-Spiegazione">
+            <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Cosa vedremo in questa guida di JavaScript Avanzato?</strong></div>
+
+            <div class="row d-flex justify-content-center" data-aos="fade-up-left">
+                <div class="col-11 Contenitore-Spiegazione">
                     <p class="Centra-Testo"> 
                         Gli argomenti che andremo a visionare in questa
                         guida riguardante javaScript avanzato saranno:
                     </p>
-                    <a href="#Template_String" > - template string </a> <br>
-                    <a href="#Promise" > - promise </a> <br>
-                    <a href="#Map" > - map </a> <br>
-                    <a href="#Destrotturazione" class="Rid-Txt-Des"> - destrotturazione </a> <br>
+                    <p class="Intro-Centarta">
+                        <a href="#Template_String" > #1 template string </a> <br>
+                        <a href="#Promise" > #2 promise </a> <br>
+                        <a href="#Map" > #3 map </a> <br>
+                        <a href="#Destrotturazione"> #4 destrotturazione </a>
+                    </p>
                 </div>
             </div>
 
@@ -137,10 +141,11 @@
             </div>
 
             <!-- Spiegazione Template String -->
-            <div class="row d-flex justify-content-center mt-In">
-                <div class="col-4"></div>
-    
-                <div class="col-4 Contenitore-Spiegazione" >
+
+            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è una Template String?</strong></div>
+
+            <div class="row d-flex justify-content-center" data-aos="flip-left">
+                <div class="col-11 Contenitore-Spiegazione" >
                     <p class="Centra-Testo"> 
                         Le template string permettono di risolvere i problemi 
                         di composizione di una stringa complessa con estrema 
@@ -150,22 +155,22 @@
                 </div>
             </div>
 
+            <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio di Template String:</strong></div>
+
             <!-- Esempio -->
-            <div class="row d-flex justify-content-center">
-                <div class="col-4 Contenitore-Spiegazione mt-5">
-
-                    <p class="Centra-Testo align-items-center" style="text-align:center;"> 
-                        Esempio di Template String:
-                    </p>
-
-                    <div class="d-flex justify-content-center mb-3">
-                        <img src="./image/Template_String_es.png" alt="String Template" class="img-fluid">
-                    </div>
-
+            <div class="row d-flex justify-content-center" data-aos="zoom-out-down">
+                <div class="col-11">
+                        <pre class="Code_Style">
+<code>
+    <span class="orange">const</span> stampa <span class="orange">=()=>{</span>
+        <span class="orange">let</span> nome <span class="orange">=</span><span class="green"> "andrea" </span>
+        <span class="orange">let</span> cognome <span class="orange">=</span><span class="green"> "giordano" </span>
+        
+        console.log<span class="purple">(</span><span class="green">"Benvenuto "</span> <span class="orange">+</span> nome <span class="orange">+</span> <span class="green">" "</span> <span class="orange">+</span> cognome<span class="purple">)</span>
+        console.log<span class="purple">(</span><span class="orange">`</span>benvenuto <span class="blue">${</span>nome<span class="blue">}</span> <span class="blue">${</span>cognome<span class="blue">}</span><span class="orange">`</span><span class="purple">)</span>
+    <span class="orange">}</span> </code>
+                        </pre>
                 </div>
-
-                <div class="col-4"></div>
-
             </div>
 
             <!-- Creazione di un tabellone promise-->
@@ -220,11 +225,11 @@
                 <div class="col-3"></div>
             </div>
 
+            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è una Promise?</strong></div>
+
             <!-- Spiegazione Promise -->
-            <div class="row d-flex justify-content-center mt-In">
-                <div class="col-4"></div>
-    
-                <div class="col-4 Contenitore-Spiegazione" >
+            <div class="row d-flex justify-content-center" data-aos="flip-left">
+                <div class="col-11 Contenitore-Spiegazione" >
                     <p class="Centra-Testo"> 
                         Fino a qualche anno fa, le promise nelle applicazioni 
                         JavaScript venivano utilizzate sfruttando alcune librerie
@@ -238,22 +243,19 @@
                 </div>
             </div>
 
+            <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio di Promise:</strong></div>
+
             <!-- Esempio -->
-            <div class="row d-flex justify-content-center">
-                <div class="col-4 Contenitore-Spiegazione mt-5">
-
-                    <p class="Centra-Testo align-items-center" style="text-align:center;"> 
-                        Esempio di Promise:
-                    </p>
-
-                    <div class="d-flex justify-content-center mb-3">
-                        <img src="./image/Promise.png" alt="String Template" class="img-fluid">
-                    </div>
+            <div class="row d-flex justify-content-center" data-aos="zoom-in">
+                <div class="col-11">
+                    <pre class="Code_Style">
+                        <code>
+    <span class="orange">let</span> promise <span class="orange">=</span> <span class="orange">new</span> promise<span class="orange">(</span><span class="purple">function</span><span class="purple">(</span>resolve, reject<span class="purple">)</span><span class="purple">{</span>
+        setTimeout<span class="orange">(</span><span class="purple">()</span> <span class="orange">=></span> resolve<span class="purple">(</span><span class="green">"fatto!"</span><span class="purple">)</span>, 1000<span class="orange">)</span>
+    <span class="purple">}</span><span class="orange">)</span></code>
+                    </pre>
 
                 </div>
-
-                <div class="col-4"></div>
-
             </div>
 
             <!-- Creazione di un tabellone map-->
@@ -308,11 +310,10 @@
                 <div class="col-3"></div>
             </div>
 
-            <!-- definizione di map -->
-            <div class="row d-flex justify-content-center mt-In">
-                <div class="col-4"></div>
-    
-                <div class="col-4 Contenitore-Spiegazione" >
+            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è la Map?</strong></div>
+
+            <div class="row d-flex justify-content-center" data-aos="flip-up">
+                <div class="col-11 Contenitore-Spiegazione" >
                     <p class="Centra-Testo"> 
                         map(). Il metodo Array.map() 
                         ti permette di iterare (l'iterazione, chiamata anche ciclo o con 
@@ -326,22 +327,20 @@
                 </div>
             </div>
 
+            <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio di Map:</strong></div>
+
             <!-- Esempio -->
-            <div class="row d-flex justify-content-center">
-                <div class="col-4 Contenitore-Spiegazione mt-5">
+            <div class="row d-flex justify-content-center" data-aos="flip-left">
+                    <div class="col-11">
+                        <pre class="Code_Style">
+                            <code>
+    <span class="orange">let</span> mioArray <span class="orange">=</span> <span class="orange">[</span>5,6,7,4,3,2<span class="orange">]</span>
 
-                    <p class="Centra-Testo align-items-center" style="text-align:center;"> 
-                        Esempio di Map:
-                    </p>
-
-                    <div class="d-flex justify-content-center mb-3">
-                        <img src="./image/Map.png" alt="String Template" class="img-fluid">
+    mioArray.map<span class="orange">(</span><span class="purple">(</span>elemento,indice<span class="purple">)</span><span class="orange">=></span><span class="purple">{</span>
+        console.log<span class="purple">(</span>elemento<span class="purple">)</span>
+    <span class="purple">}</span><span class="orange">)</span></code>
+                        </pre>
                     </div>
-
-                </div>
-
-                <div class="col-4"></div>
-
             </div>
 
             <!-- Creazione di un tabellone Destrotturazione-->
@@ -396,11 +395,10 @@
                 <div class="col-3"></div>
             </div>
 
-            <!-- definizione di Destrotturazione -->
-            <div class="row d-flex justify-content-center mt-In">
-                <div class="col-4"></div>
-    
-                <div class="col-4 Contenitore-Spiegazione" >
+            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è la Destrotturazione?</strong></div>
+
+            <div class="row d-flex justify-content-center" data-aos="flip-up">
+                <div class="col-11 Contenitore-Spiegazione" >
                     <p class="Centra-Testo"> 
                         In Javascript, la destrutturazione di un array o di un oggetto 
                         è una tecnica introdotta con lo standard ES2015, 
@@ -411,40 +409,26 @@
                 </div>
             </div>
 
+            <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio di Destrotturazione:</strong></div>
+
             <!-- Esempio1 -->
-            <div class="row d-flex justify-content-center">
-                <div class="col-4 Contenitore-Spiegazione mt-5">
-
-                    <p class="Centra-Testo align-items-center" style="text-align:center;"> 
-                        Primo Esempio di Destrotturazione:
-                    </p>
-
-                    <div class="d-flex justify-content-center mb-3">
-                        <img src="./image/Destrotturazione1.png" alt="String Template" class="img-fluid">
-                    </div>
-
-                </div>
-
-                <div class="col-4"></div>
-
-            </div>
-
-            <!-- esempio2 -->
-            <div class="row d-flex justify-content-center mt-In">
-                <div class="col-4"></div>
-
-                <div class="col-4 Contenitore-Spiegazione mt-3">
+            <div class="row d-flex justify-content-center" data-aos="zoom-in">
+                <div class="col-11">
+                    <pre class="Code_Style">
+                        <code>
+    <span class="orange">let</span> alunno <span class="orange">=</span> <span class="purple">{</span>
+        nome: <span class="green">"mario"</span>,
+        cognome: <span class="green">"rossi"</span>,
+        eta: <span class="green">"22"</span>,
+        sesso: <span class="green">"M"</span>
+    <span class="purple">}</span>
     
-                    <p class="Centra-Testo align-items-center" style="text-align:center;"> 
-                        Secondo Esempio di Destrotturazione:
-                    </p>
-
-                    <div class="d-flex justify-content-center mb-3">
-                        <img src="./image/Destrotturazione2.png" alt="String Template" class="img-fluid">
-                    </div>
+    <span class="orange">const</span> <span class="orange">{</span>nome: <span class="purple">nomeA</span>, cognome: <span class="purple">cognomeA</span><span class="orange">}</span> <span class="orange">=</span> alunno <span class="blue">//alias</span>
+    
+    console.log<span class="purple">(</span>nomeA <span class="orange">+</span> <span class="green">" "</span> <span class="orange">+</span> cognomeA<span class="purple">)</span></code>
+                    </pre>
 
                 </div>
-
             </div>
 
            <div class="row">
@@ -487,7 +471,11 @@
     
             </div>
     </div>
-    
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
+
 <body>
     <!-- Nav Bar -->
     <div class="container-fluid">
@@ -55,28 +57,13 @@
         </div>
 
         <div class="row Contenitore-Title">
-            <h1 class="Introduzione-Title"><font face="cursive">Introduzione</font> </h1>
+            <h1 class="Introduzione-Title" data-aos="fade-down-right"><font>Introduzione</font> </h1>
         </div>
 
-        <div class="row d-flex justify-content-center">
-            <div class="col-4 Contenitore-Spiegazione mt-3">
-                <p class="Centra-Testo"> 
-                    In Questa guida andremo a visionare in particolare 
-                    JavaScript Avanzato, Json, Xml e infine React. 
-                    Per quest'ultimo ovviamente andremo a vedere tutto 
-                    il necessario per il suo corretto funzionamento e 
-                    ovviamente l'installazione del npm. Se avete qualche
-                    consiglio per migliorare o aggiungere scrivete all' email
-                    in fondo a questa pagina. 
-                </p>
-            </div>
-            <div class="col-4"></div>
-        </div>
+        <div class=" SubTitle" ><strong class="Subtext typing-effect">Impostazione iniziale</strong></div>
 
-        <div class="row d-flex justify-content-center mt-In">
-            <div class="col-4"></div>
-
-            <div class="col-4 Contenitore-Spiegazione">
+        <div class="row d-flex justify-content-center" data-aos="fade-right">
+            <div class="col-11 Contenitore-Spiegazione">
                 <p class="Centra-Testo"> 
                     Prima di iniziare ti consiglio di prepararti con il 
                     tuo editor di testo preferito, se come editor usi
@@ -88,7 +75,23 @@
                     - HTML Snippets <br>
                 </p>
             </div>
-            
+        </div>
+
+        <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Cosa vedremo in questa guida?</strong></div>
+
+        <div class="row d-flex justify-content-center" data-aos="fade-down">
+            <div class="col-11 Contenitore-Spiegazione mt-3">
+                <p class="Centra-Testo"> 
+                    In Questa guida andremo a visionare in particolare 
+                    JavaScript Avanzato, Json, Xml e infine React. 
+                    Per quest'ultimo ovviamente andremo a vedere tutto 
+                    il necessario per il suo corretto funzionamento e 
+                    ovviamente l'installazione del npm. Se avete qualche
+                    consiglio per migliorare o aggiungere scrivete all' email
+                    in fondo a questa pagina. 
+                </p>
+            </div>
+            <!-- <div class="col-4"></div> -->
         </div>
 
         <div class="row">
@@ -133,6 +136,10 @@
 
     </div>
     
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
