@@ -79,9 +79,9 @@
 }
     
 .text-style:hover{
-    background-color: black;
+    background-color: rgb(24, 22, 22);
     border-radius: 30px;	
-    padding: 10px 10px 10px 10px;
+    padding: 8px 8px 8px 8px;
     color:white;
     display: flex;
     justify-content: center;
@@ -574,5 +574,9 @@ body, html{
     50%{
         border-color: transparent;
     }
+}
+
+.mt-6{
+    margin-top: 110px;
 }
 
