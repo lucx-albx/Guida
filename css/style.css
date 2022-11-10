@@ -502,7 +502,7 @@ h5{
 
 /* scroll bar */
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -511,17 +511,17 @@ h5{
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #272f35;
+    background-color: #576064;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track-piece {
     width: 2px;
-    background-color: none;
 }
 
 body{
     background-color: #323b41!important;
+    overflow-x:hidden;
 }
 
 .SubTitle{
@@ -565,3 +565,4 @@ body{
         border-color: transparent;
     }
 }
+
