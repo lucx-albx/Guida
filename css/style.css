@@ -528,9 +528,10 @@ h5{
     height: 10px!important;
 }
 
-body{
+body, html{
     background-color: #323b41!important;
     overflow-x:hidden;
+    width: 100%!important;
 }
 
 .SubTitle{
