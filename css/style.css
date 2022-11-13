@@ -108,7 +108,7 @@
     background-color: #1c2226;
     color: white;
     padding: 10px 0px 10px 0px;
-    box-shadow:  3px 3px 3px 3px #6d5c5c;
+    
     letter-spacing: .3px;
 }
 
@@ -580,3 +580,23 @@ body, html{
     margin-top: 110px;
 }
 
+a{
+    text-decoration: none!important;
+}
+
+a:hover{
+    text-decoration: none!important;
+}
+
+.link:hover{
+    text-decoration: none!important;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #61dafb;
+    background-color: #61dafb;
+    padding : 3px 3px 3px 3px;
+}
+
+.light-blue{
+    color: #61dafb;
+}
