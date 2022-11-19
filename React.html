@@ -243,7 +243,7 @@
                 </div>
             </div>
 
-             <!-- Creazione di un tabellone per gli Hooks -->
+        <!-- Creazione di un tabellone per gli Hooks -->
         <div class="row mt-5">
             <a NAME="Hooks"></a>
             <div class="col-12">
@@ -308,8 +308,8 @@
 
             <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è useState</strong></div>
 
-            <!-- Spiegazione Promise -->
             <div class="row d-flex justify-content-center" data-aos="flip-left">
+                <a NAME="useState"></a>
                 <div class="col-11 Contenitore-Spiegazione" >
                     UseState come ho detto prima è un Hooks che ci permette di andar aggiornare il nostro componente.
                     Per usare questo Hooks dovremmo prima andarlo ad importare e poi digitare: <br>
@@ -319,7 +319,7 @@
                 </div>
             </div>
 
-            <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio di useState:</strong></div>
+            <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio di useState:</strong></div>
 
             <!-- Esempio -->
             <div class="row d-flex justify-content-center" data-aos="zoom-in">
@@ -349,6 +349,108 @@
                     </pre>
                 </div>
             </div>
+
+            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è useEffect</strong></div>
+
+            <div class="row d-flex justify-content-center" data-aos="flip-left">
+                <a NAME="useEffect"></a>
+                <div class="col-11 Contenitore-Spiegazione" >
+                    UseEffect come ho detto prima è un Hooks, sostanzialmente quando usi questo Hooks stai dicendo
+                    a react di eseguire la tua funzione "effetto" dopo aver applicato i cambiamenti al DOM. Nell' esempio
+                    che andremo a vedere useremo questo useEffect per non far ripetere all'infito i nosti dati, andando nel
+                    pratico: <code>useEffect(() => {
+                        <span class="blue"> //cosa chiamare </span>
+                    }, [<span class="blue">//quando chiamare(1 volta)</span>])</code>
+                </div>
+            </div>
+
+            <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio di useEffect:</strong></div>
+
+            <!-- Esempio -->
+            <div class="row d-flex justify-content-center" data-aos="zoom-in">
+                <div class="col-11">
+                    <pre class="Code_Style">
+                        <code>
+    <span class="orange">import</span> React, <span class="orange">{</span> useState, useEffect <span class="orange">}</span> from <span class="green">'react'</span>
+
+    <span class="orange">const</span> App <span class="orange">=()=>{</span>
+        <span class="orange">const</span> <span class="purple">[</span>arrayPera, setArrayPera<span class="purple">]</span> <span class="orange">=</span> useState<span class="purple">(</span><span class="blue">[]</span><span class="purple">)</span>
+    
+        useEffect<span class="purple">(</span><span class="blue">()</span> <span class="orange">=></span> <span class="blue">{</span>
+            scarica<span class="orange">()</span>
+        <span class="blue">}</span>, <span class="blue">[]</span><span class="purple">)</span>
+    
+        <span class="orange">const</span> URL <span class="orange">=</span> <span class="green">"https://raw.githubusercontent.com/icobasco/sample_data_files/master/pera_misure_sample.json"</span>
+    
+        <span class="orange">const</span> scarica <span class="orange">=</span><span class="purple">()</span><span class="orange">=></span><span class="purple">{</span>
+            fetch<span class="blue">(</span>URL<span class="blue">)</span>
+            .then<span class="blue">(</span><span class="orange">(</span>testo<span class="orange">)=></span>testo.json<span class="orange">()</span><span class="blue">)</span>
+            .then<span class="blue">(</span><span class="orange">(</span>pera<span class="orange">)=>{</span>
+                pera.map<span class="purple">(</span><span class="blue">(</span>elemento, indice<span class="blue">)</span><span class="orange">=></span><span class="blue">{</span>
+                    setArrayPera<span class="orange">(</span><span class="purple">(</span>arrayPera<span class="purple">)</span><span class="orange">=></span><span class="purple">[</span><span class="orange">...</span>arrayPera, <span><</span>div><span class="blue">{</span>elemento.data.sensor1.lowRes.humidity <span class="orange">+</span> <span class="green">" "</span> <span class="orange">+</span> elemento.data.sensor1.lowRes.temperature <span class="orange">+</span> <span class="green">" "</span> <span class="blue">}</span><span><</span>/div><span class="purple">]</span><span class="orange">)</span>
+                <span class="blue">}</span><span class="purple">)</span>
+            <span class="orange">}</span><span class="blue">)</span>
+        <span class="orange">}</span>
+    
+        <span class="orange">return</span><span class="purple">(</span>
+            <span><</span>div><span class="blue">{</span>arrayPera<span class="blue">}</span><span><</span>/div>
+        <span class="purple">)</span>
+    <span class="orange">}</span></code>
+                    </pre>
+                </div>
+            </div>
+
+        <!-- Creazione di un tabellone per i componenti -->
+        <div class="row mt-5">
+            <a NAME="Comp"></a>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 bastone"></div>
+                </div>
+            </div>
+            <!-- Sostenitori Tabellone -->
+            <div class="col-2"></div>
+
+            <div class="col-4 d-flex justify-content-center">
+                <div class="cerchio1 d-flex justify-content-center align-items-center">
+                    <div class="buco1"></div>
+                </div>
+            </div>
+            
+            <div class="col-4 d-flex justify-content-center">
+                <div class="cerchio2 d-flex justify-content-center align-items-center">
+                    <div class="buco2"></div>
+                </div>
+            </div>
+
+            <div class="col-2"></div>
+
+            <!-- Catene Tabellone -->
+            <div class="col-2"></div>
+
+            <div class="col-4 d-flex justify-content-center">
+                <div class="catena1"></div>
+            </div>
+            
+            <div class="col-4 d-flex justify-content-center">
+                <div class="catena2"></div>
+            </div>
+
+            <div class="col-2"></div>
+
+            <!-- Tabellone con scritta -->
+            <div class="col-3"></div>
+
+            <div class="col-6 d-flex justify-content-center">
+                <div class="Tabellone d-flex align-items-center justify-content-center ">
+                    <div class="row Contenitore-Title ">
+                        <h1 class="Introduzione-Title2"><font> Componenti </font> </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3"></div>
+        </div>
 
         <div class="row">
             <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
