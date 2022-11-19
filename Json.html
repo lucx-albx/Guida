@@ -97,7 +97,7 @@
 
         <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">#2 Sintassi JSON:</strong></div>
 
-        <div class="row justify-content-center mt-In" data-aos="fade-up-left">
+        <div class="row justify-content-center" data-aos="fade-up-left">
             <div class="col-11 Contenitore-Spiegazione d-flex align-items-center">
                 Un altra sintassi del Json è: un array, ovvero una raccolta ordinata di valori. Un array comincia con 
                 [parentesi quadra a sinistra e finisce con la
@@ -182,7 +182,7 @@
         <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Utilizzo della Fetch</strong></div>
 
         <!-- Spiegazione Fetch -->
-        <div class="row d-flex justify-content-center mt-In" data-aos="flip-up">
+        <div class="row d-flex justify-content-center" data-aos="flip-up">
             <div class="col-11 Contenitore-Spiegazione" >
                 <p class="Centra-Testo"> 
                     La FETCH tramite l'utilizzo di un URL è in grado di 
@@ -214,10 +214,10 @@
             data.forEach<span class="orange">(</span><span class="purple">function</span><span class="purple">(</span><span class="blue">{</span>lora_device_id, data, measured_at<span class="blue">}</span><span class="purple">)</span> <span class="purple">{</span>
     
                 insert <span class="orange">+=</span> <span class="green">"<</span><span class="green">tr>";</span>
-                insert <span class="orange">+=</span> <span class="green">`<</span><span class="green">td></span></span>benvenuto <span class="blue">${</span>lora_device_id<span class="blue">}</span><span class="green"><</span><span class="green">/td>`</span>
-                insert <span class="orange">+=</span> <span class="green">`<</span><span class="green">td></span></span>benvenuto <span class="blue">${</span>measured_at<span class="blue">}</span></td><span class="green"><</span><span class="green">/td>`</span>
-                insert <span class="orange">+=</span> <span class="green">`<</span><span class="green">td></span></span>benvenuto <span class="blue">${</span>data.sensor1.lowRes.humidity<span class="blue">}</span><span class="green"><</span><span class="green">/td>`</span>
-                insert <span class="orange">+=</span> <span class="green">`<</span><span class="green">td></span></span>benvenuto <span class="blue">${</span>data.sensor1.lowRes.humidity<span class="blue">}</span><span class="green"><</span><span class="green">/td>`</span>
+                insert <span class="orange">+=</span> <span class="green">`<</span><span class="green">td></span></span><span class="blue">${</span>lora_device_id<span class="blue">}</span><span class="green"><</span><span class="green">/td>`</span>
+                insert <span class="orange">+=</span> <span class="green">`<</span><span class="green">td></span></span><span class="blue">${</span>measured_at<span class="blue">}</span></td><span class="green"><</span><span class="green">/td>`</span>
+                insert <span class="orange">+=</span> <span class="green">`<</span><span class="green">td></span></span><span class="blue">${</span>data.sensor1.lowRes.humidity<span class="blue">}</span><span class="green"><</span><span class="green">/td>`</span>
+                insert <span class="orange">+=</span> <span class="green">`<</span><span class="green">td></span></span><span class="blue">${</span>data.sensor1.lowRes.humidity<span class="blue">}</span><span class="green"><</span><span class="green">/td>`</span>
                 insert <span class="orange">+=</span> <span class="green">"<</span><span class="green">tr>";</span>
         
             <span class="purple">}</span><span class="orange">)</span>
