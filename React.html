@@ -65,11 +65,19 @@
 
         <div class="row d-flex justify-content-center" data-aos="fade-up-left">
             <div class="col-11 Contenitore-Spiegazione mt-3">
-                <p class="Centra-Testo"> 
+                <p> 
                     React è una SPA (una single page application), è molto utilizzato
                     per fare ovviamente web app, poichè un progetto su react si sviluppa
                     in una sola pagina. Prima di iniziare ti consiglio, se hai visual
-                    studio code, di installare l'estensione: 
+                    studio code, se vuoi che le estensioni che ti ho fatto installare nella home 
+                    in sezione introduzione allora segui questi passaggi: <br>
+                    file --> preferenze --> setting  --> apri impostazioni json ed inserisci:<br>
+                    <pre>
+<code class="purple">-"emmet.includeLanguages": {
+    "javascript":"html"
+} </code>
+                    </pre>
+                    scarica anche l'estensione: <br>
                     <p class="purple">- ES7+ React/Redux/React-Native snippets </p>
                 </p>
             </div>
@@ -450,6 +458,239 @@
             </div>
 
             <div class="col-3"></div>
+        </div>
+
+        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è un componente</strong></div>
+
+            <div class="row d-flex justify-content-center" data-aos="flip-up">
+                <div class="col-11 Contenitore-Spiegazione" >
+                    <p class="Centra-Testo"> 
+                        Un componente semplicemente ti permette di suddividere l'interfaccia dell'utente del tuo progetto
+                        in pezzi piccoli, così da rendere il codice più leggibile e funzionale.
+                    </p>
+                </div>
+            </div>
+        
+
+            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Esempio componenti</strong></div>
+
+            <!-- app.js -->
+            <div class="row d-flex justify-content-center" data-aos="zoom-in">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-11 d-flex align-items-center">
+                    <pre class="Code_Style_No_Bord">
+                        <div class="Code_Style_Up"> <strong>App.js</strong> </div> 
+                        <code>
+    <span class="orange">import</span> <span class="green">'./App.css'</span>
+    <span class="orange">import</span> Header <span class="orange">from</span> <span class="green">"./Header.js"</span>
+    
+    <span class="orange">const</span> App <span class="orange">=()=></span>
+    
+        <span class="orange">return</span> <span class="purple">(</span>
+        <span><</span>div>
+            <span class="green"><</span><span class="green">Header/></span>
+        <span><</span>/div>
+        <span class="purple">)</span>
+    <span class="orange">}</span>
+    
+    <span class="orange">export default</span> App</code>
+                </pre>
+
+                </div>
+
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-11">
+                    <pre class="Code_Style_No_Bord">
+                        <div class="Code_Style_Up"> <strong>Header.js</strong> </div> 
+                        <code>
+    <span class="orange">import</span> React <span class="orange">from</span> <span class="green">'react'</span>
+    <span class="orange">import</span> <span class="green">"./Header.css"</span>
+    
+    <span class="orange">const</span> Header <span class="orange">=()=>{</span>
+        
+        <span class="orange">return</span> (
+            <span><</span>div className<span class="orange">=</span><span class="green">"header"</span>>
+                <span><</span>div>
+                    <span><</span>img width<span class="orange">=</span><span class="green">"200"</span> src<span class="orange">=</span><span class="green">"./YourSrc"</span>/>
+                <span><</span>/div>
+                <span><</span>div className<span class="orange">=</span><span class="green">"link"</span>>
+                    <span><</span>div> elem1 <span><</span>/div>
+                    <span><</span>div> elem2 <span><</span>/div>
+                    <span><</span>div> elem3 <span><</span>/div>
+                    <span><</span>div> elem4 <span><</span>/div>
+                <span><</span>/div>
+            <span><</span>/div>
+        )
+    }
+    
+    <span class="orange">export default</span> Header</code>
+                </pre>
+
+                </div>
+            </div>
+        
+
+            <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Passaggio di parametri</strong></div>
+
+            <div class="row justify-content-center" data-aos="fade-up-left">
+                <div class="col-11 Contenitore-Spiegazione d-flex align-items-center">
+                    Tra le componenti possiamo passare dei parametri, Tutto ciò è possibile grazie ai props(ovvero
+                    quando React incontra un elemento che rappresenta un componente definito dall'utente, 
+                    passa gli attributi JSX ed i figli a questo componente come un singolo oggetto)
+                </div>
+            </div>
+
+            <div class=" SubTitle mt-In" data-aos="fade-up-right"><strong class="Subtext">Esempio passaggio di parametri:</strong></div>
+
+            <div class="row d-flex justify-content-center" data-aos="zoom-out-down">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-11">
+                    <pre class="Code_Style_No_Bord">
+                        <div class="Code_Style_Up"> <strong>App.js</strong> </div> 
+                        <code>
+    <span class="orange">import</span> <span class="green">'./App.css'</span>
+    <span class="orange">import</span> Header <span class="orange">from</span> <span class="green">"./Header.js"</span>
+    
+    <span class="orange">const</span> App <span class="orange">=()=></span>
+        <span class="orange">let</span> mieiParametri<span class="orange">=</span><span class="purple">{</span>
+            pathlogo : <span class="green">"https://53.fs1.hubspotusercontent-na1.net/hub/53/hubfs/image8-2.jpg?width=893&height=600&name=image8-2.jpg"</span>,
+            link1:<span class="blue">{</span>
+                url:<span class="green">"https://www.google.it"</span>,
+                anchor:<span class="green">"GOOGLE"</span>
+            <span class="blue">}</span>,
+            link2:<span class="blue">{</span>
+                url:<span class="green">"https://www.bing.it"</span>,
+                anchor:<span class="green">"BING"</span> 
+            <span class="blue">}</span>,
+            link3:<span class="blue">{</span>
+                url:<span class="green">"https://www.msn.it"</span>,
+                anchor:<span class="green">"MSN"</span> 
+            <span class="blue">}</span>,
+            link4:<span class="blue">{</span>
+                url:<span class="green">"https://www.yahoo.it"</span>,
+                anchor:<span class="green">"YAHOO"</span> 
+            <span class="blue">}</span>
+        <span class="purple">}</span>
+    
+        <span class="orange">return</span> <span class="purple">(</span>
+        <span><</span>div>
+            <span class="green"><</span><span class="green">Header</span> valori<span class="orange">=</span><span class="blue">{</span>mieiParametri<span class="blue">}</span><span class="green">/></span>
+        <span><</span>/div>
+        <span class="purple">)</span>
+    <span class="orange">}</span>
+    
+    <span class="orange">export default</span> App</code>
+                </pre>
+
+                </div>
+
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-11 d-flex align-items-center">
+                    <pre class="Code_Style_No_Bord">
+                        <div class="Code_Style_Up"> <strong>Header.js</strong> </div> 
+                        <code>
+    <span class="orange">import</span> React <span class="orange">from</span> <span class="green">'react'</span>
+    <span class="orange">import</span> <span class="green">"./Header.css"</span>
+    
+    <span class="orange">const</span> Header <span class="orange">=(</span>props<span class="orange">)=>{</span>
+        
+        <span class="orange">return</span> (
+            <span><</span>div className<span class="orange">=</span><span class="green">"header"</span>>
+                <span><</span>div>
+                    <span><</span>img width<span class="orange">=</span><span class="green">"200"</span> src<span class="orange">=</span><span class="blue">{</span>props.valori.pathlogo<span class="blue">}</span>/>
+                <span><</span>/div>
+                <span><</span>div className<span class="orange">=</span><span class="green">"link"</span>>
+                    <span><</span>div> <span><</span>a href<span class="orange">=</span><span class="blue">{</span>props.valori.link1.url<span class="blue">}</span>> <span class="blue">{</span>props.valori.link1.anchor<span class="blue">}</span> <span><</span>/a> <span><</span>/div>
+                    <span><</span>div> <span><</span>a href<span class="orange">=</span><span class="blue">{</span>props.valori.link2.url<span class="blue">}</span>> <span class="blue">{</span>props.valori.link2.anchor<span class="blue">}</span> <span><</span>/a> <span><</span>/div>
+                    <span><</span>div> <span><</span>a href<span class="orange">=</span><span class="blue">{</span>props.valori.link3.url<span class="blue">}</span>> <span class="blue">{</span>props.valori.link3.anchor<span class="blue">}</span> <span><</span>/a> <span><</span>/div>
+                    <span><</span>div> <span><</span>a href<span class="orange">=</span><span class="blue">{</span>props.valori.link4.url<span class="blue">}</span>> <span class="blue">{</span>props.valori.link4.anchor<span class="blue">}</span> <span><</span>/a> <span><</span>/div>
+                <span><</span>/div>
+            <span><</span>/div>
+        )
+    }
+    
+    <span class="orange">export default</span> Header</code>
+                </pre>
+
+                </div>
+    
+            </div>
+
+            <div class="row mt-5" >
+                <a NAME="Boot"></a>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 bastone"></div>
+                    </div>
+                </div>
+                <!-- Sostenitori Tabellone -->
+                <div class="col-2"></div>
+
+                <div class="col-4 d-flex justify-content-center">
+                    <div class="cerchio1 d-flex justify-content-center align-items-center">
+                        <div class="buco1"></div>
+                    </div>
+                </div>
+                
+                <div class="col-4 d-flex justify-content-center">
+                    <div class="cerchio2 d-flex justify-content-center align-items-center">
+                        <div class="buco2"></div>
+                    </div>
+                </div>
+
+                <div class="col-2"></div>
+
+                <!-- Catene Tabellone -->
+                <div class="col-2"></div>
+
+                <div class="col-4 d-flex justify-content-center">
+                    <div class="catena1"></div>
+                </div>
+                
+                <div class="col-4 d-flex justify-content-center">
+                    <div class="catena2"></div>
+                </div>
+
+                <div class="col-2"></div>
+
+                <!-- Tabellone con scritta -->
+                <div class="col-3"></div>
+
+                <div class="col-6 d-flex justify-content-center">
+                    <div class="Tabellone d-flex align-items-center justify-content-center ">
+                        <div class="row Contenitore-Title ">
+                            <h1 class="Introduzione-Title2"><font> Bootstrap </font> </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3"></div>
+            </div>
+
+            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Spiegazione Bootstrap</strong></div>
+
+            <div class="row d-flex justify-content-center" data-aos="flip-up">
+                <div class="col-11 Contenitore-Spiegazione" >
+                    <p> 
+                        Bootstrap è una libreria che ci permette di rendere i nostri siti responsive. In react
+                        si può pure usare questa libreria, ci sono due metodi in cui possiamo usare bootstrap su
+                        react e sono, uno con i moduli e l'altro con i cdn che abbiamo sempre usato. 
+                    </p>
+                </div>
+            </div>
+
+            <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Bootstrap x CDN</strong></div>
+
+        <div class="row d-flex justify-content-center" data-aos="flip-up">
+            <div class="col-11 Contenitore-Spiegazione d-flex">
+                <pre> <code class="orange" id="myInput"><span><</span>link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></code></pre>
+                <div onclick="copyContent()" class="button-copy"><strong>Copy</strong> </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center mt-In" data-aos="flip-up">
+            <div class="col-11 Contenitore-Spiegazione d-flex">
+                <pre><code class="orange" id="myInput2"><span><</span>script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<span><</span>script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<span><</span>script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</code></pre>
+                <div onclick="copyContent2()" class="button-copy"><strong>Copy</strong> </div>
+            </div>
         </div>
 
         <div class="row">
