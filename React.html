@@ -679,18 +679,163 @@
 
         <div class="row d-flex justify-content-center" data-aos="flip-up">
             <div class="col-11 Contenitore-Spiegazione d-flex">
-                <pre> <code class="orange" id="myInput"><span><</span>link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></code></pre>
-                <div onclick="copyContent()" class="button-copy"><strong>Copy</strong> </div>
+                <pre> <code class="purple" id="myInput"><span><</span>link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></code></pre>
+                <div onclick="copyContent()" class="button-copy"><strong class="pad">Copy</strong> </div>
             </div>
         </div>
 
-        <div class="row d-flex justify-content-center mt-In" data-aos="flip-up">
+        <div class="row d-flex justify-content-center mt-5" data-aos="flip-up">
             <div class="col-11 Contenitore-Spiegazione d-flex">
-                <pre><code class="orange" id="myInput2"><span><</span>script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<span><</span>script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<span><</span>script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</code></pre>
-                <div onclick="copyContent2()" class="button-copy"><strong>Copy</strong> </div>
+                <pre><code class="purple" id="myInput2"><span><</span>script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"><span><</span>/script>
+<span><</span>script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"><span><</span>/script>
+<span><</span>script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"><span><</span>/script>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</code></pre>
+                <div onclick="copyContent2()" class="button-copy"><strong class="pad">Copy</strong> </div>
             </div>
+        </div>
+
+        <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Dove mettere i CDN</strong></div>
+
+        <div class="row d-flex justify-content-center" data-aos="fade-up-left">
+            <div class="col-11 Contenitore-Spiegazione mt-3">
+                <p class="Centra-Testo"> 
+                    Per applicare bootstrap con i cdn dobbiamo andare nella cartella public e poi una volta aperta essa cerchiamo il file
+                    index.html, una volta fatto ciò metti il link del css nel head e nel body vai a mettere i tre script.
+                </p>
+            </div>
+        </div>
+
+        <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio Bootstrap x CDN</strong></div>
+
+        <div class="row justify-content-center" data-aos="flip-down">
+            <div class="col-11 d-flex align-items-center justify-content-center">
+                <div class="mb-3">
+                    <img src="./image/BootstrapCdn.png" alt="String Template" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+
+        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Bootstrap x Moduli</strong></div>
+
+        <div class="row d-flex justify-content-center" data-aos="flip-left">
+            <div class="col-11 Contenitore-Spiegazione" >
+                <p> 
+                    Prima di applicare Bootstrap con i moduli è giusto che tu sappia che tutte le funzioni di bootstrap che usavamo
+                    utilizzando i CDN, ovvero &nbsp<code><span><</span>div className="col-xl-2">prova<span><</span>/div></code>, con i moduli lo 
+                    andremo a scrivere:&nbsp<code><span><</span>Col xl={2}>prova<span><</span>/Col></code> ed inoltre ogni elemento che andiamo
+                    ad usare dovremmo importarlo.
+                </p>
+            </div>
+        </div>
+
+        <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Come scaricare il modulo</strong></div>
+
+
+        <div class="row justify-content-center" data-aos="fade-left">
+            <div class="col-11 Contenitore-Spiegazione">
+                    Per scaricare il modulo di bootstrap, dobbiamo prima di tutto entrare nella cartella del progetto in questione; fatto ciò
+                    aprite il prompt di comandi e digitate:&nbsp
+                    <code>npm install react-bootstrap bootstrap</code> 
+                    una volta scaricato il modulo accertiamoci che nella cartella node-modules ci sia: &nbsp<code>react-bootstrap</code>
+
+            </div>
+        </div>
+
+        <div class=" SubTitle mt-In" data-aos="fade-up-right"><strong class="Subtext">Esempio Bootstrap x Moduli:</strong></div>
+
+        <!-- Esempio -->
+        <div class="row d-flex justify-content-center" data-aos="zoom-out-down">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-11">
+                <pre class="Code_Style_No_Bord">
+                    <div class="Code_Style_Up"> <strong>App.js</strong> </div> 
+                    <code>
+    <span class="orange">import</span> <span class="green">'bootstrap/dist/css/bootstrap.min.css'</span>;  
+    <span class="orange">import</span> <span class="orange">{</span>Container , Row, Col, Nav, Navbar<span class="orange">}</span> <span class="orange">from</span> <span class="green">'react-bootstrap'</span>
+    <span class="orange">import</span> React <span class="orange">from</span> <span class="green">'react'</span>
+    <span class="orange">import</span> <span class="green">"./App.css"</span>
+    
+    <span class="orange">const</span> App <span class="orange">=()=>{</span>
+        
+        <span class="orange">return</span> <span class="purple">(</span>
+            <<span class="green">Container</span> fluid>
+    
+                <<span class="green">Row</span> className<span class="orange">=</span><span class="green">"justify-content-center bg-dark"</span>>
+                    <<span class="green">Col</span> xl<span class="orange">=</span><span class="blue">{</span>2<span class="blue">}</span> lg<span class="orange">=</span><span class="blue">{</span>2<span class="blue">}</span> md<span class="orange">=</span><span class="blue">{</span>3<span class="blue">}</span> className<span class="orange">=</span><span class="green">"d-none d-md-block mt-2 mb-2"</span>>
+                        <span><</span>img width<span class="orange">=</span><span class="green">"60"</span> src<span class="orange">=</span><span class="green">"./TuaImage"</span>/>
+                    <span><</span>/<span class="green">Col</span>>
+                    <<span class="green">Col</span> xl<span class="orange">=</span><span class="blue">{</span>10<span class="blue">}</span> lg<span class="orange">=</span><span class="blue">{</span>10<span class="blue">}</span> md<span class="orange">=</span><span class="blue">{</span>9<span class="blue">}</span> className<span class="orange">=</span><span class="green">"d-flex justify-content-between align-items-center"</span>>
+                        <span><</span>div className<span class="orange">=</span><span class="green">'d-none d-md-block'</span>> elem <span><</span>/div>
+                        <span><</span>div className<span class="orange">=</span><span class="green">'d-none d-md-block'</span>> elem <span><</span>/div>
+                        <span><</span>div className<span class="orange">=</span><span class="green">'d-none d-md-block'</span>> elem <span><</span>/div>
+                        <span><</span>div className<span class="orange">=</span><span class="green">'d-none d-md-block'</span>> elem <span><</span>/div>
+                    <span><</span>/<span class="green">Col</span>>
+    
+                    <<span class="green">Navbar</span> collapseOnSelect expand<span class="orange">=</span><span class="green">"lg"</span> bg<span class="orange">=</span><span class="green">"dark"</span> variant<span class="orange">=</span><span class="green">"dark"</span> className<span class="orange">=</span><span class="green">'d-md-none'</span>>
+                        <<span class="green">Navbar.Brand</span>>
+                            <span><</span>img width<span class="orange">=</span><span class="green">"60"</span> src<span class="orange">=</span><span class="green">"./TuaImage"</span>/>
+                        <span><</span>/<span class="green">Navbar.Brand</span>>
+                        <<span class="green">Navbar.Toggle</span> aria-controls<span class="orange">=</span><span class="green">"responsive-navbar-nav"</span>/>
+                        <<span class="green">Navbar.Collapse</span> id<span class="orange">=</span><span class="green">"responsive-navbar-nav"</span>>
+                            <<span class="green">Nav</span>>
+                                <<span class="green">Nav.link</span>> elem <span><</span>/<span class="green">Nav.link</span>>
+                                <<span class="green">Nav.link</span>> elem <span><</span>/<span class="green">Nav.link</span>>
+                            <span><</span>/<span class="green">Nav</span>>
+                            <<span class="green">Nav</span>>
+                                <<span class="green">Nav.link</span>> elem <span><</span>/<span class="green">Nav.link</span>>
+                                <<span class="green">Nav.link</span>> elem <span><</span>/<span class="green">Nav.link</span>>
+                            <span><</span>/<span class="green">Nav</span>>
+                        <span><</span>/<span class="green">Navbar.Collapse</span>>
+                    <span><</span>/<span class="green">Navbar</span>>
+                <span><</span>/<span class="green">Row</span>>
+            <span><</span>/<span class="green">Container</span>>
+        <span class="purple">)</span>
+    <span class="orange">}</span>
+    
+    <span class="orange">export default</span> App</code>
+            </pre>
+
+            </div>
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-11 d-flex align-items-center">
+                <pre class="Code_Style_No_Bord">
+                    <div class="Code_Style_Up"> <strong>App.css</strong> </div> 
+        <code>.<span class="green">header</span><span class="light-green">{
+        display: flex;
+        justify-content: space-between; 
+        background-color: lightblue;
+    }</span>
+    
+    .<span class="green">link</span><span class="light-green">{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }</span>
+    
+    a<span class="light-green">{
+        text-decoration: none;
+        color: white;
+    }</span>
+    
+    a:<span class="green">hover</span><span class="light-green">{
+        padding: 10px;
+        border: 1px solid black;
+        background-color: blue;
+        border-radius: 20px;
+    }</span></code>
+            </pre>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="alert alert-success alert-dismissible fade show fixed-bottom confermaAlert invisible d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+            &nbsp; <strong>Copiato!</strong>&nbsp;Testo copiato con successo!.
+            <button type="button" class="close" onclick="chiudiConferma()" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
         </div>
 
         <div class="row">

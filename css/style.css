@@ -499,6 +499,10 @@ h5{
     color: #826ed9
 }
 
+.light-green{
+    color: lightgreen
+}
+
 /* scroll bar */
 ::-webkit-scrollbar {
     width: 6px;
@@ -516,6 +520,10 @@ h5{
 
 ::-webkit-scrollbar-track-piece {
     width: 2px;
+}
+
+::-webkit-scrollbar {
+    height: 5px!important;
 }
 
 /* code example scrollbar */
@@ -641,4 +649,8 @@ a:hover{
     background-color: #61dafb;
     color: blue;
     cursor: pointer;
+}
+
+.pad{
+    padding: 15px 15px 15px 15px;
 }

@@ -4,10 +4,11 @@ const copyContent = async () => {
     
     try {
         await navigator.clipboard.writeText(text);
-        console.log('Content copied to clipboard');
+        showAlert()
     } catch (err) {
         console.error('Failed to copy: ', err);
     }
+    
 }
 
 const copyContent2 = async () => {
@@ -16,9 +17,21 @@ const copyContent2 = async () => {
     
     try {
         await navigator.clipboard.writeText(text);
-        console.log('Content copied to clipboard');
+        showAlert()
     } catch (err) {
         console.error('Failed to copy: ', err);
     }
 } 
-            
+
+const showAlert =()=> {
+    const myTimeout = setTimeout(chiudiConferma, 1500);
+    let annuncio = document.querySelector(".confermaAlert");
+    annuncio.classList.remove("invisible");
+
+}
+
+const chiudiConferma =()=> {
+    let annuncio = document.querySelector(".confermaAlert");
+    annuncio.classList.add("invisible");
+}
+   
