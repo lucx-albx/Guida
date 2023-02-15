@@ -34,4 +34,4 @@ const chiudiConferma =()=> {
     let annuncio = document.querySelector(".confermaAlert");
     annuncio.classList.add("invisible");
 }
-   
+

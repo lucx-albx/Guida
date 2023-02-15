@@ -19,10 +19,10 @@
                 <a href="./index.html"> <img src="./image/Logo.png" alt="" width="80px" class="imgS img-fluid"></a>
             </div>
             <div class="col-10 d-flex align-items-center justify-content-between ">
-                <div class="text-white text-style d-none d-md-block "> <a href="./JavaScriptAd.html" style="text-decoration: none; color: white;"><strong> <font face="Comic Sans">JAVASCRIPT_AVANZATO</font> </strong></a> </div>
-                <div class="text-white text-style d-none d-md-block"> <a href="./Json.html" style="text-decoration: none; color: white;"><strong> <font face="Comic Sans">JSON</font></strong></a></div>
-                <div class="text-white text-style d-none d-md-block"> <a href="./Xml.html" style="text-decoration: none; color: white;"><strong> <font face="Comic Sans">XML</font></strong> </a></div>
-                <div class="text-white text-style d-none d-md-block"> <a href="./React.html" style="text-decoration: none; color: white;"><strong> <font face="Comic Sans">REACT</font></strong></a> </div>
+                <a href="./JavaScriptAd.html" style="text-decoration: none; color: white;"><div class="text-white text-style d-none d-md-block "> <strong> <font face="Comic Sans">JAVASCRIPT_AVANZATO</font> </strong></div></a>
+                <a href="./Json.html" style="text-decoration: none; color: white;"><div class="text-white text-style d-none d-md-block"> <strong> <font face="Comic Sans">JSON</font></strong></div></a>
+                <a href="./Xml.html" style="text-decoration: none; color: white;"><div class="text-white text-style d-none d-md-block"> <strong> <font face="Comic Sans">XML</font></strong></div></a>
+                <a href="./React.html" style="text-decoration: none; color: white;"><div class="text-white text-style d-none d-md-block"> <strong> <font face="Comic Sans">REACT</font></strong></div></a>
             </div>
 
              <div class="col-sm-8 col-7 d-md-none">
@@ -90,11 +90,50 @@
                 In questa quida riguardante React andremo a visionare argomenti che ci faranno
                 capire come creare il meglio possibile la nostra SPA, infatti gli argomenti 
                 in questione sono: <br>
-                <a class="light-blue link" href="#Installazione">- Installazione </a> <br>
-                <a class="light-blue link" href="#Make-Page">- Creazione di una Pagina </a> <br>
-                <a class="light-blue link" href="#Hooks">- Hooks</a> <br>
-                <a class="light-blue link" href="#Comp">- Componenti</a> <br>
-                <a class="light-blue link" href="#Boot">- Bootstrap</a>
+                <a href="#Installazione">
+                    <button class="learn-more bt-more mt-3">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Installazione</span>
+                    </button>
+                </a> <br>
+
+                <a href="#Make-Page">
+                    <button class="learn-more bt-more mt-3">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text ml-5">Crea Pagina</span>
+                    </button>
+                </a> <br>
+
+                <a href="#Hooks">
+                    <button class="learn-more bt-more mt-3">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Hooks</span>
+                    </button>
+                </a> <br>
+
+                <a href="#Boot">
+                    <button class="learn-more bt-more mt-3">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Bootstrap</span>
+                    </button>
+                </a> <br>
+
+                <a href="#TipiTargetS">
+                    <button class="learn-more bt-more mt-3">
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Tipi di target</span>
+                    </button>
+                </a> <br>
             </div>
         </div>
 
@@ -311,6 +350,7 @@
                     Gli Hooks che andremo a visionare in questa guida saranno: <br>
                     <a class="light-blue link" href="#useState">- UseState </a> <br>
                     <a class="light-blue link" href="#useEffect">- UseEffect </a> <br>
+                    <a class="light-blue link" href="#useRef">- UseRef </a> <br>
                 </div>
             </div>
 
@@ -404,6 +444,49 @@
             <span><</span>div><span class="blue">{</span>arrayPera<span class="blue">}</span><span><</span>/div>
         <span class="purple">)</span>
     <span class="orange">}</span></code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è useRef</strong></div>
+
+            <div class="row d-flex justify-content-center" data-aos="flip-left">
+                <a NAME="useRef"></a>
+                <div class="col-11 Contenitore-Spiegazione" >
+                    UseRef, come ho detto prima è un Hooks, che ci permette di andar a prendere tutti gli attributi cha ha div, ad esempio,
+                    lo useRef si usa solitamente al posto di querySelector. Dopo aver importato lo stato, la sintassi per lo useRef è questa: 
+                    <code>const nomeVar = useRef(null)</code> da come puoi intuire nomeVar è il nome che scegli di dare al tuo Ref e imposti il 
+                    valore iniziale a null e se in tal caso voui prendere il testo specifico di un div farai: <code>nomeVar.current.textContent</code>.
+                </div>
+            </div>
+
+            <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio di useRef:</strong></div>
+
+            <!-- Esempio -->
+            <div class="row d-flex justify-content-center" data-aos="zoom-in">
+                <div class="col-11">
+                    <pre class="Code_Style">
+                        <code>
+    <span class="orange">import</span> React, {useRef} <span class="orange">from</span> 'react'
+    <span class="orange">import</span> <span class="green">'./App.css'</span>
+    
+    <span class="orange">const</span> App <span class="orange">=()=>{</span>
+        <span class="orange">const</span> prendiTesto <span class="orange">=</span> useRef<span class="purple">(</span><span class="blue">null</span><span class="purple">)</span>
+    
+        <span class="orange">const</span> ValoreRef <span class="orange">=</span><span class="purple">()</span><span class="orange">=></span><span class="purple">{</span>
+            console.log<span class="blue">(</span>prendiTesto<span class="blue">)</span>
+        <span class="purple">}</span>
+    
+        <span class="orange">return</span><span class="purple">(</span>
+        <span><</span>div>
+            <span><</span>div ref<span class="orange">=</span><span class="blue">{</span>prendiTesto<span class="blue">}</span>>ciao testo<span><</span>/div>
+            <span><</span>button onClick<span class="orange">=</span><span class="blue">{</span>ValoreRef<span class="blue">}</span>>Prendi Valore Ref<span><</span>/button>
+        <span><</span>/div>
+        <span class="purple">)</span>
+    <span class="orange">}</span>
+    
+    <span class="orange">export default</span> App
+                        </code>
                     </pre>
                 </div>
             </div>
@@ -827,7 +910,160 @@
 
         </div>
 
+        <!-- Creazione di un tabellone per Tipi di Target -->
+        <div class="row mt-5">
+            <a NAME="TipiTargetS"></a>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 bastone"></div>
+                </div>
+            </div>
+            <!-- Sostenitori Tabellone -->
+            <div class="col-2"></div>
 
+            <div class="col-4 d-flex justify-content-center">
+                <div class="cerchio1 d-flex justify-content-center align-items-center">
+                    <div class="buco1"></div>
+                </div>
+            </div>
+            
+            <div class="col-4 d-flex justify-content-center">
+                <div class="cerchio2 d-flex justify-content-center align-items-center">
+                    <div class="buco2"></div>
+                </div>
+            </div>
+
+            <div class="col-2"></div>
+
+            <!-- Catene Tabellone -->
+            <div class="col-2"></div>
+
+            <div class="col-4 d-flex justify-content-center">
+                <div class="catena1"></div>
+            </div>
+            
+            <div class="col-4 d-flex justify-content-center">
+                <div class="catena2"></div>
+            </div>
+
+            <div class="col-2"></div>
+
+            <!-- Tabellone con scritta -->
+            <div class="col-3"></div>
+
+            <div class="col-6 d-flex justify-content-center">
+                <div class="Tabellone d-flex align-items-center justify-content-center ">
+                    <div class="row Contenitore-Title ">
+                        <h1 class="Introduzione-Title2"><font> Tipi Di Target </font> </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3"></div>
+        </div>
+
+        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cosa sono i Target?</strong></div>
+
+        <div class="row d-flex justify-content-center" data-aos="flip-up">
+            <div class="col-11 Contenitore-Spiegazione" >
+                <p> 
+                    In React, event.target si riferisce all'elemento DOM che ha scatenato l'evento. Ci sono diversi tipi di event.target in React, 
+                    ecco una breve introduzione per tutti quelli che andremo a visionare in questa guida: <br>
+                    <a class="light-blue link" href="#target">- event.target </a> <br>
+                    <a class="light-blue link" href="#CurrentTarget">- event.currentTarget </a>
+                </p>
+            </div>
+        </div>
+
+        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Target</strong></div>
+
+        <div class="row d-flex justify-content-center" data-aos="flip-up">
+            <a NAME="target"></a>
+            <div class="col-11 Contenitore-Spiegazione" >
+                <p> 
+                    In React, event.target è una proprietà dell'oggetto evento (event) che rappresenta l'elemento del DOM che ha effettivamente scatenato l'evento. 
+                    In altre parole, event.target restituisce un riferimento all'elemento HTML su cui è stato effettivamente verificato l'evento.
+                </p>
+            </div>
+        </div>
+
+        <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio event.target</strong></div>
+
+        <!-- Esempio -->
+        <div class="row d-flex justify-content-center" data-aos="zoom-in">
+            <div class="col-11">
+                <pre class="Code_Style">
+                    <code>
+    <span class="orange">import</span> React <span class="orange">from</span> 'react'
+    <span class="orange">import</span> <span class="green">'./App.css'</span>
+    
+    <span class="orange">const</span> App <span class="orange">=()=>{</span>
+    
+        <span class="orange">const</span> evento <span class="orange">=</span><span class="purple">(</span>event<span class="purple">)</span><span class="orange">=></span><span class="purple">{</span>
+            console.log<span class="blue">(</span>event.target<span class="blue">)</span>
+        <span class="purple">}</span>
+    
+        <span class="orange">return</span><span class="purple">(</span>
+            <span><</span>div>
+                <span><</span>div onClick<span class="orange">=</span><span class="blue">{</span>evento<span class="blue">}</span>>
+                    <span><</span>div>noi siamo <span><</span>/div>
+                    <span><</span>div>home <span><</span>/div>
+                <span><</span>/div>
+            <span><</span>/div>
+        <span class="purple">)</span>
+    <span class="orange">}</span>
+    
+    <span class="orange">export default</span> App
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+
+        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">currentTarget</strong></div>
+
+        <div class="row d-flex justify-content-center" data-aos="flip-up">
+            <a NAME="CurrentTarget"></a>
+            <div class="col-11 Contenitore-Spiegazione" >
+                <p> 
+                    In React, event.currentTarget è una proprietà dell'oggetto evento (event) che rappresenta l'elemento su cui è stato associato l'evento. 
+                    A differenza di event.target, che restituisce l'elemento che ha effettivamente scatenato l'evento, event.currentTarget restituisce sempre 
+                    lo stesso elemento, indipendentemente da dove l'evento è stato scatenato all'interno di esso.
+                </p>
+            </div>
+        </div>
+
+        <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio event.currentTarget</strong></div>
+
+        <!-- Esempio -->
+        <div class="row d-flex justify-content-center" data-aos="zoom-in">
+            <div class="col-11">
+                <pre class="Code_Style">
+                    <code>
+    <span class="orange">import</span> React <span class="orange">from</span> 'react'
+    <span class="orange">import</span> <span class="green">'./App.css'</span>
+    
+    <span class="orange">const</span> App <span class="orange">=()=>{</span>
+    
+        <span class="orange">const</span> evento <span class="orange">=</span><span class="purple">(</span>event<span class="purple">)</span><span class="orange">=></span><span class="purple">{</span>
+            console.log<span class="blue">(</span>event.currentTarget<span class="blue">)</span>
+        <span class="purple">}</span>
+    
+        <span class="orange">return</span><span class="purple">(</span>
+            <span><</span>div>
+                <span><</span>div onClick<span class="orange">=</span><span class="blue">{</span>evento<span class="blue">}</span>>
+                    <span><</span>div>noi siamo <span><</span>/div>
+                    <span><</span>div>home <span><</span>/div>
+                <span><</span>/div>
+            <span><</span>/div>
+        <span class="purple">)</span>
+    <span class="orange">}</span>
+    
+    <span class="orange">export default</span> App
+                    </code>
+                </pre>
+            </div>
+        </div>
 
 
         <div class="alert alert-success alert-dismissible fade show fixed-bottom confermaAlert invisible d-flex align-items-center" role="alert">
