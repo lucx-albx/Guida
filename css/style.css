@@ -423,7 +423,11 @@ h5{
     }
 
     .Code_Style{
-        margin-left: -4%!important;
+        margin-left: -5%!important;
+    }
+
+    .Code_Style_No_Bord{
+        margin-left: -5%!important;
     }
 
 }
