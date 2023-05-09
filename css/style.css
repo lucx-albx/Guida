@@ -422,6 +422,10 @@ h5{
         margin-left: 0%!important;
     }
 
+    .Code_Style{
+        margin-left: -4%!important;
+    }
+
 }
 
 @media screen and (max-width: 380px) {
@@ -481,9 +485,10 @@ h5{
     font-family: arial;
     font-size: 14px;
     font-weight: 700;
-    width: 100%;
+    width: 101%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 0px;
+    margin-left: -0.8%;
 }
 
 .orange{
