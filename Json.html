@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guida JSON</title>
-    <link rel="shortcut icon" href="./image/Icon_Logo.png"/>
-    <link rel="stylesheet" href="./css/style.css">
+    
     <script src="./js/script.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="shortcut icon" href="./Img/Logo.png"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Sito Guida | Home</title>
+
+
 </head>
-<body>
-    <!-- Nav Bar -->
-    <div class="container-fluid">
+<body onload="carica_guida_json()">
+    <div class="containter-fluid">
+
+        <!-- INIZIO NAVBAR -->
         <div class="row color1 fixed-top sh-box">
             <div class="col-1 d-none d-md-block mt-2 mb-2 ml-xl-3 ml-lg-3 ml-md-3">
-                <a href="./index.html"> <img src="./image/Logo.png" alt="" width="80px" class="imgS img-fluid"></a>
+                <a href="./index.html"> <img src="./Img/Logo.png" alt="" width="65px" class="imgS img-fluid"></a>
             </div>
             <div class="col-10 d-flex align-items-center justify-content-between ">
-                <a href="./JavaScriptAd.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block "> <strong> <font face="Comic Sans">JAVASCRIPT_AVANZATO</font> </strong></div></a>
-                <a href="./Json.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> <font face="Comic Sans">JSON</font></strong></div></a>
-                <a href="./Xml.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> <font face="Comic Sans">XML</font></strong></div></a>
-                <a href="./React.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> <font face="Comic Sans">REACT</font></strong></div></a>
+                <a href="./JavaScriptAd.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block "> <strong> Javascript_avanzato </strong></div></a>
+                <a href="./Json.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> Json </strong></div></a>
+                <a href="./Xml.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> Xml </strong></div></a>
+                <a href="./React.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> React </strong></div></a>
+                <a href="./mongoDb.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> MONGO_DB </strong></div></a>
             </div>
 
              <div class="col-sm-8 col-7 d-md-none">
@@ -45,241 +52,89 @@
                             <li class="nav-item active">
                                 <a class="nav-link nav-btn" href="./React.html" style="text-decoration: none; color: white;"><strong><font face="Comic Sans">REACT</font></strong></a>
                             </li>
+                            <li class="nav-item active">
+                                <a class="nav-link nav-btn" href="./mongoDb.html" style="text-decoration: none; color: white;"><strong><font face="Comic Sans">MONGO_DB</font></strong></a>
+                            </li>
                         </ul> 
                     </div>
                 </nav>
             </div>
 
-            <div class="col-sm-3 col-3  d-md-none">
-                <a href="./index.html"> <img src="./image/Logo.png" alt="" width="80px" class="imgS"></a>
+            <div class="col-sm-3 col-3 d-md-none mt-2 mb-2">
+                <a href="./index.html"> <img src="./Img/Logo.png" alt="" width="65px" class="imgS"></a>
             </div>
         </div>
-
-        <!-- introduzione JSON -->
-        <div class="row Contenitore-Title mt-6" data-aos="fade-down-right">
-            <h1 class="Introduzione-Title " style="text-align:center;"><font>Cos'è il JSON? </font> </h1>
-        </div>
-
-        <div class=" SubTitle" ><strong class="Subtext typing-effect">Definizione di JSON</strong></div>
-
-        <div class="row d-flex justify-content-center" data-aos="fade-up-left">
-            <div class="col-11 Contenitore-Spiegazione mt-3">
-                <p class="Centra-Testo"> 
-                    JSON è un formato di serializzazione basato su testo per lo scambio di dati, 
-                    principalmente tra server e applicazione web. JSON è l'acronimo di JavaScript 
-                    Object Notation, e utilizza l'estensione di file . json. JSON è un concorrente di XML, 
-                    ma possiede una sintassi più semplice e compatta rispetto ad esso.
-                </p>
-            </div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">#1 Sintassi Json</strong></div>
-
-        <div class="row justify-content-center" data-aos="flip-down">
-            <div class="col-11 Contenitore-Spiegazione d-flex align-items-center">
-                Una sintassi del json e ad oggetto che è una serie non ordinata di nomi o valori. 
-                Un oggetto inizia con {parentesi graffa sinistra e finisce
-                con }parentesi graffa destra. 
-                Ogni nome è seguito da :due punti e la coppia di nome o valore sono separata
-                da ,virgola
-            </div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">#1 Sintassi Esempio:</strong></div>
-
-        <div class="row justify-content-center" data-aos="flip-down">
-            <div class="col-11 d-flex align-items-center justify-content-center">
-                <div class="mb-3">
-                    <img src="./image/JSON_OBJECT.png" alt="String Template" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">#2 Sintassi JSON:</strong></div>
-
-        <div class="row justify-content-center" data-aos="fade-up-left">
-            <div class="col-11 Contenitore-Spiegazione d-flex align-items-center">
-                Un altra sintassi del Json è: un array, ovvero una raccolta ordinata di valori. Un array comincia con 
-                [parentesi quadra a sinistra e finisce con la
-                ]parentesi quadra a destra. I valori sono separati da una ,virgola.
-            </div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">#2 Sintassi Esempio:</strong></div>
-
-        <div class="row justify-content-center" data-aos="flip-up">
-            <div class="col-11 d-flex align-items-center justify-content-center">
-                <div class="mb-3">
-                    <img src="./image/JSON_ARRAY.png" alt="String Template" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Cosa vederemo del JSON?</strong></div>
+        <!-- FINE NAVBAR -->
 
 
-        <div class="row justify-content-center" data-aos="fade-left">
-            <div class="col-11 Contenitore-Spiegazione">
-                    L'argomento che andremo a visionare in questa
-                    guida riguardante il JSON sarà soltanto uno, ovvero: <br>
-                    <a class="light-blue link" href="#Fetch">- La Fetch </a>
 
-            </div>
-        </div>
-
-        <!-- Creazione di un tabellone per la Fetch -->
-        <div class="row mt-5">
-            <a NAME="Fetch"></a>
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12 bastone"></div>
-                </div>
-            </div>
-            <!-- Sostenitori Tabellone -->
-            <div class="col-2"></div>
-
-            <div class="col-4 d-flex justify-content-center">
-                <div class="cerchio1 d-flex justify-content-center align-items-center">
-                    <div class="buco1"></div>
-                </div>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-center">
-                <div class="cerchio2 d-flex justify-content-center align-items-center">
-                    <div class="buco2"></div>
-                </div>
-            </div>
-
-            <div class="col-2"></div>
-
-            <!-- Catene Tabellone -->
-            <div class="col-2"></div>
-
-            <div class="col-4 d-flex justify-content-center">
-                <div class="catena1"></div>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-center">
-                <div class="catena2"></div>
-            </div>
-
-            <div class="col-2"></div>
-
-            <!-- Tabellone con scritta -->
-            <div class="col-3"></div>
-
-            <div class="col-6 d-flex justify-content-center">
-                <div class="Tabellone d-flex align-items-center justify-content-center ">
-                    <div class="row Contenitore-Title ">
-                        <h1 class="Introduzione-Title2"><font> Fetch </font> </h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3"></div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Utilizzo della Fetch</strong></div>
-
-        <!-- Spiegazione Fetch -->
-        <div class="row d-flex justify-content-center" data-aos="flip-up">
-            <div class="col-11 Contenitore-Spiegazione" >
-                <p> 
-                    La FETCH tramite l'utilizzo di un URL è in grado di 
-                    estrapolare i dati da un file .json. La fetch utilizza
-                    due .then() nel primo si va "selezionare" il JSON e nella 
-                    seconda vengono presi i suoi dati, e all'intero di essa
-                    viene fatto un callBack per poi andare a visualizzare 
-                    questi dati nel nostro sito. Ma vediamo un esempio!
-                </p>
-            </div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-up-right"><strong class="Subtext">Esempio Fetch:</strong></div>
-
-        <!-- Esempio -->
-        <div class="row d-flex justify-content-center" data-aos="zoom-out-down">
-            <div class="col-11">
-                <pre class="Code_Style">
-                    <code>
-    <span class="orange">const</span> url <span class="orange">=</span> <span class="green">"https://raw.githubusercontent.com/icobasco/sample_data_files/master/pera_misure_sample.json"</span>
-
-    <span class="orange">const</span> datiLoading <span class="orange">=()=></span><span class="purple">{</span>
-        fetch<span class="purple">(</span>url<span class="purple">)</span>
-        .then<span class="purple">(</span><span class="blue">(</span>dati<span class="blue">)</span> <span class="orange">=></span> dati.json<span class="blue">()</span><span class="purple">)</span>
-        .then<span class="purple">(</span><span class="blue">(</span>data<span class="blue">)</span><span class="orange">=></span><span class="blue">{</span>
-            <span class="orange">const</span> dateTable <span class="orange">=</span> document.querySelector<span class="green">("table tbody")</span>;
-    
-            <span class="orange">let</span> insert <span class="orange">=</span> <span class="green">""</span>
-            data.forEach<span class="orange">(</span><span class="purple">function</span><span class="purple">(</span><span class="blue">{</span>lora_device_id, data, measured_at<span class="blue">}</span><span class="purple">)</span> <span class="purple">{</span>
-    
-                insert <span class="orange">+=</span> <span class="green">"<</span><span class="green">tr>";</span>
-                insert <span class="orange">+=</span> <span class="green">`<</span><span class="green">td></span></span><span class="blue">${</span>lora_device_id<span class="blue">}</span><span class="green"><</span><span class="green">/td>`</span>
-                insert <span class="orange">+=</span> <span class="green">`<</span><span class="green">td></span></span><span class="blue">${</span>measured_at<span class="blue">}</span></td><span class="green"><</span><span class="green">/td>`</span>
-                insert <span class="orange">+=</span> <span class="green">`<</span><span class="green">td></span></span><span class="blue">${</span>data.sensor1.lowRes.humidity<span class="blue">}</span><span class="green"><</span><span class="green">/td>`</span>
-                insert <span class="orange">+=</span> <span class="green">`<</span><span class="green">td></span></span><span class="blue">${</span>data.sensor1.lowRes.humidity<span class="blue">}</span><span class="green"><</span><span class="green">/td>`</span>
-                insert <span class="orange">+=</span> <span class="green">"<</span><span class="green">tr>";</span>
-        
-            <span class="purple">}</span><span class="orange">)</span>
-            dateTable.innerHTML <span class="orange">=</span> insert;
-        <span class="blue">}</span><span class="purple">)</span>
-    <span class="purple">}</span></code>
-                </pre>
-            </div>
-
-        </div>
-
-        <div class="row">
-            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
-                <style>
-                    .path-0{
-                    animation:pathAnim-0 4s;
-                    animation-timing-function: linear;
-                    animation-iteration-count: infinite;
-                    }
-                    @keyframes pathAnim-0{
-                    0%{
-                        d: path("M 0,400 C 0,400 0,200 0,200 C 112.48803827751198,174.57416267942585 224.97607655502395,149.14832535885168 314,148 C 403.02392344497605,146.85167464114832 468.5837320574162,169.98086124401917 566,170 C 663.4162679425838,170.01913875598083 792.688995215311,146.92822966507177 888,160 C 983.311004784689,173.07177033492823 1044.6602870813397,222.3062200956938 1131,235 C 1217.3397129186603,247.6937799043062 1328.6698564593303,223.8468899521531 1440,200 C 1440,200 1440,400 1440,400 Z");
-                    }
-                    25%{
-                        d: path("M 0,400 C 0,400 0,200 0,200 C 87.80861244019138,229.7511961722488 175.61722488038276,259.5023923444976 283,242 C 390.38277511961724,224.49760765550238 517.3397129186603,159.74162679425837 612,161 C 706.6602870813397,162.25837320574163 769.023923444976,229.5311004784689 848,252 C 926.976076555024,274.4688995215311 1022.5645933014355,252.13397129186603 1124,236 C 1225.4354066985645,219.86602870813397 1332.7177033492821,209.93301435406698 1440,200 C 1440,200 1440,400 1440,400 Z");
-                    }
-                    50%{
-                        d: path("M 0,400 C 0,400 0,200 0,200 C 76.13397129186606,213.1196172248804 152.26794258373212,226.23923444976077 247,229 C 341.7320574162679,231.76076555023923 455.06220095693766,224.16267942583733 572,222 C 688.9377990430623,219.83732057416267 809.4832535885168,223.11004784688998 908,207 C 1006.5167464114832,190.88995215311002 1083.0047846889952,155.39712918660285 1168,151 C 1252.9952153110048,146.60287081339715 1346.4976076555024,173.30143540669857 1440,200 C 1440,200 1440,400 1440,400 Z");
-                    }
-                    75%{
-                        d: path("M 0,400 C 0,400 0,200 0,200 C 82.26794258373207,159.78947368421052 164.53588516746413,119.57894736842107 268,130 C 371.46411483253587,140.42105263157893 496.12440191387554,201.4736842105263 590,218 C 683.8755980861245,234.5263157894737 746.9665071770336,206.52631578947367 846,180 C 945.0334928229664,153.47368421052633 1080.0095693779904,128.42105263157896 1185,132 C 1289.9904306220096,135.57894736842104 1364.9952153110048,167.78947368421052 1440,200 C 1440,200 1440,400 1440,400 Z");
-                    }
-                    100%{
-                        d: path("M 0,400 C 0,400 0,200 0,200 C 112.48803827751198,174.57416267942585 224.97607655502395,149.14832535885168 314,148 C 403.02392344497605,146.85167464114832 468.5837320574162,169.98086124401917 566,170 C 663.4162679425838,170.01913875598083 792.688995215311,146.92822966507177 888,160 C 983.311004784689,173.07177033492823 1044.6602870813397,222.3062200956938 1131,235 C 1217.3397129186603,247.6937799043062 1328.6698564593303,223.8468899521531 1440,200 C 1440,200 1440,400 1440,400 Z");
-                    }
-                    }
-                </style><path d="M 0,400 C 0,400 0,200 0,200 C 112.48803827751198,174.57416267942585 224.97607655502395,149.14832535885168 314,148 C 403.02392344497605,146.85167464114832 468.5837320574162,169.98086124401917 566,170 C 663.4162679425838,170.01913875598083 792.688995215311,146.92822966507177 888,160 C 983.311004784689,173.07177033492823 1044.6602870813397,222.3062200956938 1131,235 C 1217.3397129186603,247.6937799043062 1328.6698564593303,223.8468899521531 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#1c2226" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
-            </svg>
-        </div>
-            
-            <div class="row sticky p-3 justify-content-center color1">
+        <!-- INIZIO GUIDA -->
+        <div class="container mt-6">
+            <div class="ghome">
                 
-                <div class="col-6 col-lg-4 col-xl-4 col-sm-6 col-md-4">
-                    <h5>- Chi Sono?</h5>
-                    <p  style="color: white;">Sono Luca ho 17 anni è frequento la 4 ITIS INFO. <br> A.S 2022/2023</p>
-                </div>
-    
-                <div class="col-6 col-lg-4 col-xl-4 col-sm-6 col-md-4">
-                    <h5>- Come nasce il progetto?</h5>
-                    <p  style="color: white;">Questo progetto nasce sotto consiglio del prof di TPSIT, consigliandoci di farci una guida personale.</p>
-                </div>
-    
             </div>
-            
         </div>
+        <!-- FINE GUIDA -->
+
+
+
+        <!-- INIZIO BOTTONE SCROLLA SU -->
+        <button id="scrollToTopBtn" onclick="scrollToTop()">&#8593;</button>
+        <!-- FINE BOTTONE SCROLLA SU -->
+                
+
+
+        <!-- INIZIO FOOTER -->
+        <div class="row">
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 345" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
+                .path-0{
+                animation:pathAnim-0 4s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                }
+            @keyframes pathAnim-0{
+              0%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 112.48803827751198,174.57416267942585 224.97607655502395,149.14832535885168 314,148 C 403.02392344497605,146.85167464114832 468.5837320574162,169.98086124401917 566,170 C 663.4162679425838,170.01913875598083 792.688995215311,146.92822966507177 888,160 C 983.311004784689,173.07177033492823 1044.6602870813397,222.3062200956938 1131,235 C 1217.3397129186603,247.6937799043062 1328.6698564593303,223.8468899521531 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+              25%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 87.80861244019138,229.7511961722488 175.61722488038276,259.5023923444976 283,242 C 390.38277511961724,224.49760765550238 517.3397129186603,159.74162679425837 612,161 C 706.6602870813397,162.25837320574163 769.023923444976,229.5311004784689 848,252 C 926.976076555024,274.4688995215311 1022.5645933014355,252.13397129186603 1124,236 C 1225.4354066985645,219.86602870813397 1332.7177033492821,209.93301435406698 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+              50%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 76.13397129186606,213.1196172248804 152.26794258373212,226.23923444976077 247,229 C 341.7320574162679,231.76076555023923 455.06220095693766,224.16267942583733 572,222 C 688.9377990430623,219.83732057416267 809.4832535885168,223.11004784688998 908,207 C 1006.5167464114832,190.88995215311002 1083.0047846889952,155.39712918660285 1168,151 C 1252.9952153110048,146.60287081339715 1346.4976076555024,173.30143540669857 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+              75%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 82.26794258373207,159.78947368421052 164.53588516746413,119.57894736842107 268,130 C 371.46411483253587,140.42105263157893 496.12440191387554,201.4736842105263 590,218 C 683.8755980861245,234.5263157894737 746.9665071770336,206.52631578947367 846,180 C 945.0334928229664,153.47368421052633 1080.0095693779904,128.42105263157896 1185,132 C 1289.9904306220096,135.57894736842104 1364.9952153110048,167.78947368421052 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+              100%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 112.48803827751198,174.57416267942585 224.97607655502395,149.14832535885168 314,148 C 403.02392344497605,146.85167464114832 468.5837320574162,169.98086124401917 566,170 C 663.4162679425838,170.01913875598083 792.688995215311,146.92822966507177 888,160 C 983.311004784689,173.07177033492823 1044.6602870813397,222.3062200956938 1131,235 C 1217.3397129186603,247.6937799043062 1328.6698564593303,223.8468899521531 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+            }</style><path d="M 0,400 C 0,400 0,200 0,200 C 112.48803827751198,174.57416267942585 224.97607655502395,149.14832535885168 314,148 C 403.02392344497605,146.85167464114832 468.5837320574162,169.98086124401917 566,170 C 663.4162679425838,170.01913875598083 792.688995215311,146.92822966507177 888,160 C 983.311004784689,173.07177033492823 1044.6602870813397,222.3062200956938 1131,235 C 1217.3397129186603,247.6937799043062 1328.6698564593303,223.8468899521531 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#28242c" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+        </div>
+
+        <div class="row sticky color1 justify-content-center">
+
+            <div class="col-6 col-lg-4 col-xl-4 col-sm-6 col-md-4" style="color: white;">
+                <h5>- Chi Sono?</h5>
+                <p>Sono Luca ho 17 anni è frequento la 4 ITIS INFO. <br> A.S 2022/2023</p>
+            </div>
+
+            <div class="col-6 col-lg-4 col-xl-4 col-sm-6 col-md-4 mb-5" style="color: white;">
+                <h5>- Come nasce il progetto?</h5>
+                <p>Questo progetto nasce sotto consiglio del prof di TPSIT, consigliandoci di farci una guida personale.</p>
+            </div>
+
+        </div>
+        <!-- FINE FOOTER -->
     
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    </div>
+    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

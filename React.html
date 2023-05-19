@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guida React</title>
-    <link rel="shortcut icon" href="./image/Icon_Logo.png"/>
-    <link rel="stylesheet" href="./css/style.css">
+    
     <script src="./js/script.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="shortcut icon" href="./Img/Logo.png"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Sito Guida | React</title>
+
+
 </head>
-<body>
-    <!-- Nav Bar -->
-    <div class="container-fluid">
+<body onload="carica_guida_react()">
+    <div class="containter-fluid">
+
+        <!-- INIZIO NAVBAR -->
         <div class="row color1 fixed-top sh-box">
             <div class="col-1 d-none d-md-block mt-2 mb-2 ml-xl-3 ml-lg-3 ml-md-3">
-                <a href="./index.html"> <img src="./image/Logo.png" alt="" width="80px" class="imgS img-fluid"></a>
+                <a href="./index.html"> <img src="./Img/Logo.png" alt="" width="65px" class="imgS img-fluid"></a>
             </div>
             <div class="col-10 d-flex align-items-center justify-content-between ">
-                <a href="./JavaScriptAd.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block "> <strong> <font face="Comic Sans">JAVASCRIPT_AVANZATO</font> </strong></div></a>
-                <a href="./Json.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> <font face="Comic Sans">JSON</font></strong></div></a>
-                <a href="./Xml.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> <font face="Comic Sans">XML</font></strong></div></a>
-                <a href="./React.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> <font face="Comic Sans">REACT</font></strong></div></a>
+                <a href="./JavaScriptAd.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block "> <strong> Javascript_avanzato </strong></div></a>
+                <a href="./Json.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> Json </strong></div></a>
+                <a href="./Xml.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> Xml </strong></div></a>
+                <a href="./React.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> React </strong></div></a>
+                <a href="./mongoDb.html" style="text-decoration: none; color: white;"><div class="text-white nav-btn d-none d-md-block"> <strong> MONGO_DB </strong></div></a>
             </div>
 
              <div class="col-sm-8 col-7 d-md-none">
@@ -45,1036 +52,33 @@
                             <li class="nav-item active">
                                 <a class="nav-link nav-btn" href="./React.html" style="text-decoration: none; color: white;"><strong><font face="Comic Sans">REACT</font></strong></a>
                             </li>
+                            <li class="nav-item active">
+                                <a class="nav-link nav-btn" href="./mongoDb.html" style="text-decoration: none; color: white;"><strong><font face="Comic Sans">MONGO_DB</font></strong></a>
+                            </li>
                         </ul> 
                     </div>
                 </nav>
             </div>
 
-            <div class="col-sm-3 col-3  d-md-none">
-                <a href="./index.html"> <img src="./image/Logo.png" alt="" width="80px" class="imgS"></a>
+            <div class="col-sm-3 col-3 d-md-none mt-2 mb-2">
+                <a href="./index.html"> <img src="./Img/Logo.png" alt="" width="65px" class="imgS"></a>
             </div>
         </div>
+        <!-- FINE NAVBAR -->
 
 
-        <!-- introduzione React -->
-        <div class="row Contenitore-Title mt-6" data-aos="fade-down-right">
-            <h1 class="Introduzione-Title " style="text-align:center;"><font>Cos'è React? </font> </h1>
-        </div>
 
-        <div class="SubTitle" ><strong class="Subtext typing-effect">Scopriamo React</strong></div>
-
-        <div class="row d-flex justify-content-center" data-aos="fade-up-left">
-            <div class="col-11 Contenitore-Spiegazione mt-3">
-                <p> 
-                    React è una SPA (una single page application), è molto utilizzato
-                    per fare ovviamente web app, poichè un progetto su react si sviluppa
-                    in una sola pagina. Prima di iniziare ti consiglio, se hai visual
-                    studio code, se vuoi che le estensioni che ti ho fatto installare nella home 
-                    in sezione introduzione allora segui questi passaggi: <br>
-                    file --> preferenze --> setting  --> apri impostazioni json ed inserisci:<br>
-                    <pre>
-<code class="purple">-"emmet.includeLanguages": {
-    "javascript":"html"
-} </code>
-                    </pre>
-                    scarica anche l'estensione: <br>
-                    <p class="purple">- ES7+ React/Redux/React-Native snippets </p>
-                </p>
-            </div>
-        </div>
-
-        <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Cosa vedremo in questa guida?</strong></div>
-
-        <div class="row d-flex justify-content-center" data-aos="fade-down">
-            <div class="col-11 Contenitore-Spiegazione mt-3">
-                In questa quida riguardante React andremo a visionare argomenti che ci faranno
-                capire come creare il meglio possibile la nostra SPA, infatti gli argomenti 
-                in questione sono: <br>
-                <a href="#Installazione">
-                    <button class="learn-more bt-more mt-3">
-                        <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text ml-5">Installazione</span>
-                    </button>
-                </a> <br>
-
-                <a href="#Make-Page">
-                    <button class="learn-more bt-more mt-3">
-                        <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text ml-5">Crea Pagina</span>
-                    </button>
-                </a> <br>
-
-                <a href="#Hooks">
-                    <button class="learn-more bt-more mt-3">
-                        <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Hooks</span>
-                    </button>
-                </a> <br>
-
-                <a href="#Componenti">
-                    <button class="learn-more bt-more mt-3">
-                        <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Componenti</span>
-                    </button>
-                </a> <br>
-
-                <a href="#Boot">
-                    <button class="learn-more bt-more mt-3">
-                        <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Bootstrap</span>
-                    </button>
-                </a> <br>
-
-                <a href="#TipiTargetS">
-                    <button class="learn-more bt-more mt-3">
-                        <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Tipi di target</span>
-                    </button>
-                </a> <br>
-            </div>
-        </div>
-
-        <!-- Creazione di un tabellone per Installazione -->
-        <div class="row mt-5">
-            <a NAME="Installazione"></a>
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12 bastone"></div>
-                </div>
-            </div>
-            <!-- Sostenitori Tabellone -->
-            <div class="col-2"></div>
-
-            <div class="col-4 d-flex justify-content-center">
-                <div class="cerchio1 d-flex justify-content-center align-items-center">
-                    <div class="buco1"></div>
-                </div>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-center">
-                <div class="cerchio2 d-flex justify-content-center align-items-center">
-                    <div class="buco2"></div>
-                </div>
-            </div>
-
-            <div class="col-2"></div>
-
-            <!-- Catene Tabellone -->
-            <div class="col-2"></div>
-
-            <div class="col-4 d-flex justify-content-center">
-                <div class="catena1"></div>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-center">
-                <div class="catena2"></div>
-            </div>
-
-            <div class="col-2"></div>
-
-            <!-- Tabellone con scritta -->
-            <div class="col-3"></div>
-
-            <div class="col-6 d-flex justify-content-center">
-                <div class="Tabellone d-flex align-items-center justify-content-center ">
-                    <div class="row Contenitore-Title ">
-                        <h1 class="Introduzione-Title2"><font> Installazione </font> </h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3"></div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Partiamo con l'installazione</strong></div>
-
-            <div class="row d-flex justify-content-center" data-aos="flip-left">
-                <div class="col-11 Contenitore-Spiegazione" >
-                        Per poter iniziare a programmare in React dobbiamo prima scaricare Node.js,
-                        per poterlo scaricare ti puoi recare sul loro <a class="light-blue link" href="https://nodejs.org/en/">&nbsp;sito ufficiale</a>,
-                        io ti consiglio di scaricare la LTS, ovvero l'ultima versione disponibile di Node.
-                </div>
-            </div>
-
-            <!-- Creazione di un tabellone per Installazione -->
-        <div class="row mt-5">
-            <a NAME="Make-Page"></a>
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12 bastone"></div>
-                </div>
-            </div>
-            <!-- Sostenitori Tabellone -->
-            <div class="col-2"></div>
-
-            <div class="col-4 d-flex justify-content-center">
-                <div class="cerchio1 d-flex justify-content-center align-items-center">
-                    <div class="buco1"></div>
-                </div>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-center">
-                <div class="cerchio2 d-flex justify-content-center align-items-center">
-                    <div class="buco2"></div>
-                </div>
-            </div>
-
-            <div class="col-2"></div>
-
-            <!-- Catene Tabellone -->
-            <div class="col-2"></div>
-
-            <div class="col-4 d-flex justify-content-center">
-                <div class="catena1"></div>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-center">
-                <div class="catena2"></div>
-            </div>
-
-            <div class="col-2"></div>
-
-            <!-- Tabellone con scritta -->
-            <div class="col-3"></div>
-
-            <div class="col-6 d-flex justify-content-center">
-                <div class="Tabellone d-flex align-items-center justify-content-center ">
-                    <div class="row Contenitore-Title ">
-                        <h1 class="Introduzione-Title2"><font> Creazione Pagina </font> </h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3"></div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Come inizare</strong></div>
-
-            <div class="row d-flex justify-content-center" data-aos="flip-left">
-                <div class="col-11 Contenitore-Spiegazione" >
-                        Una volta scaricato Node.js puoi aprire il tuo prompt di comandi e digitare: <br> <code class="purple"> npx create-react-app NomeCheVuoi</code> <br>
-                        questo comando ti crereà la cartella con tutto il necessario al suo interno. Una 
-                        volta aperta la cartella ci troviamo di fronte 3 cartelle, la prima sarà node-modules, come
-                        ti consiglia il nome ci saranno tutti i moduli necessari per ora, la seconda cartella sarà public,
-                        ovvero la cartella che contiene index.html della nostra pagina e infine src, la cartella che 
-                        conterrà il nostro progetto, quindi cliccala e ti ritroverai di fronte a te molti file ma quelli
-                        che ci interessano sono principalmente App.js e App.css, quindi aprili. in App.js ti troverai di base 
-                        una pagina d'esempio di questo genere:
-                </div>
-            </div>
-        
-            <div class="row justify-content-center mt-5" data-aos="flip-down">
-                <div class="col-11 d-flex align-items-center justify-content-center">
-                    <div class="mb-3">
-                        <img src="./image/PrimaPaginaReact.png" alt="String Template" class="img-fluid img-thumbnail">
-                    </div>
-                </div>
-            </div>
-        
-            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Come funziona App.js</strong></div>
-
-            <div class="row d-flex justify-content-center" data-aos="flip-up">
-                <div class="col-11 Contenitore-Spiegazione" >
-                        Volendo potreasti cancellare tutto, e se hai installato l'estensione consigliata
-                        all'inizio, digitare <code>  rafce</code>, in poche parole ti ricrea tutto il necessario.
-                        Ma prima di continuare vediamo che in react a differenza dell'html per fare una classe
-                        si usa className e non class, l'altra differenza e che il nostro codice che una volta lo
-                        andavamo a scrivere nel body si scrive nel return, ma perchè nel return? il return usa 
-                        il linguaggio JSX (javaScript Extension) e quindi al suo interno andrà la nosta "pagina",
-                        Mentre tra {} ci va javascipt, mentre sopra il return ci andranno le nostre funzione ecc..
-                        Capito ciò per visualizzare il nostro progetto apriamo il prompt dei comandi e andiamo a digitare
-                        <code>npm start</code>, ed ecco visualizzato il nostro progetto!
-                </div>
-            </div>
-
-        <!-- Creazione di un tabellone per gli Hooks -->
-        <div class="row mt-5">
-            <a NAME="Hooks"></a>
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12 bastone"></div>
-                </div>
-            </div>
-            <!-- Sostenitori Tabellone -->
-            <div class="col-2"></div>
-
-            <div class="col-4 d-flex justify-content-center">
-                <div class="cerchio1 d-flex justify-content-center align-items-center">
-                    <div class="buco1"></div>
-                </div>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-center">
-                <div class="cerchio2 d-flex justify-content-center align-items-center">
-                    <div class="buco2"></div>
-                </div>
-            </div>
-
-            <div class="col-2"></div>
-
-            <!-- Catene Tabellone -->
-            <div class="col-2"></div>
-
-            <div class="col-4 d-flex justify-content-center">
-                <div class="catena1"></div>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-center">
-                <div class="catena2"></div>
-            </div>
-
-            <div class="col-2"></div>
-
-            <!-- Tabellone con scritta -->
-            <div class="col-3"></div>
-
-            <div class="col-6 d-flex justify-content-center">
-                <div class="Tabellone d-flex align-items-center justify-content-center ">
-                    <div class="row Contenitore-Title ">
-                        <h1 class="Introduzione-Title2"><font> Hooks </font> </h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3"></div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è un Hooks</strong></div>
-
-            <div class="row d-flex justify-content-center" data-aos="flip-left">
-                <div class="col-11 Contenitore-Spiegazione" >
-                    Gli Hooks ti permettono di utilizzare state ed altre funzioni di React senza dover scrivere una classe. 
-                    Gli Hooks che andremo a visionare in questa guida saranno: <br>
-                    <a class="light-blue link" href="#useState">- UseState </a> <br>
-                    <a class="light-blue link" href="#useEffect">- UseEffect </a> <br>
-                    <a class="light-blue link" href="#useRef">- UseRef </a> <br>
-                </div>
-            </div>
-
-            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è useState</strong></div>
-
-            <div class="row d-flex justify-content-center" data-aos="flip-left">
-                <a NAME="useState"></a>
-                <div class="col-11 Contenitore-Spiegazione" >
-                    UseState come ho detto prima è un Hooks che ci permette di andar aggiornare il nostro componente.
-                    Per usare questo Hooks dovremmo prima andarlo ad importare e poi digitare: <br>
-                    <code>const [Per vedere cosa c'e all'interno dello stato, Serve per modificare lo stato (è UNA FUNZIONE)] = useState("") --> memorizzo solo UN dato!(Più dati = [])</code> <br>
-                    nella quadre si andranno a mettere due parametri divisi da una virgola = useState("") se andiamo a mettere i 
-                    doppi apici come scritto sopra memorizza un solo dato mentre con le [] andrà a memorizzare più dati.
-                </div>
-            </div>
-
-            <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio di useState:</strong></div>
-
-            <!-- Esempio -->
-            <div class="row d-flex justify-content-center" data-aos="zoom-in">
-                <div class="col-11">
-                    <pre class="Code_Style">
-                        <code>
-    <span class="orange">import</span> React, <span class="orange">{</span> useState <span class="orange">}</span> from <span class="green">'react'</span>
-
-    <span class="orange">const</span> App <span class="orange">=()=>{</span>
-        <span class="orange">const</span> <span class="purple">[</span>MsgPera, setMsgPera<span class="purple">]</span> <span class="orange">=</span> useState<span class="purple">(</span><span class="blue">[]</span><span class="purple">)</span>
-    
-        <span class="orange">const</span> URL <span class="orange">=</span> <span class="green">"https://raw.githubusercontent.com/icobasco/sample_data_files/master/pera_misure_sample.json"</span>
-    
-        <span class="orange">const</span> scarica <span class="orange">=</span><span class="purple">()</span><span class="orange">=></span><span class="purple">{</span>
-            fetch<span class="blue">(</span>URL<span class="blue">)</span>
-            .then<span class="blue">(</span><span class="orange">(</span>testo<span class="orange">)=></span>testo.json<span class="orange">()</span><span class="blue">)</span>
-            .then<span class="blue">(</span><span class="orange">(</span>pera<span class="orange">)=>{</span>
-                setMsgPera<span class="purple">(</span>pera<span class="blue">[</span><span class="purple">0</span><span class="blue">]</span>.data.sensor1.lowRes.humidity <span class="orange">+</span> <span class="green">" "</span> <span class="orange">+</span> pera<span class="blue">[</span><span class="purple">0</span><span class="blue">]</span>.data.sensor1.lowRes.temperature<span class="purple">)</span>
-            
-            <span class="orange">}</span><span class="blue">)</span>
-        <span class="blue">}</span>
-    
-        <span class="orange">return</span> <span class="purple">(</span>
-            <span><</span>div><span class="blue">{</span>MsgPera<span class="blue">}</span> Prova<span class="blue">{</span>scarica<span class="orange">()</span><span class="blue">}</span><span><</span><span>/</span>div>
-        <span class="purple">)</span>
-    <span class="orange">}</span></code>
-                    </pre>
-                </div>
-            </div>
-
-            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è useEffect</strong></div>
-
-            <div class="row d-flex justify-content-center" data-aos="flip-left">
-                <a NAME="useEffect"></a>
-                <div class="col-11 Contenitore-Spiegazione" >
-                    UseEffect come ho detto prima è un Hooks, sostanzialmente quando usi questo Hooks stai dicendo
-                    a react di eseguire la tua funzione "effetto" dopo aver applicato i cambiamenti al DOM. Nell' esempio
-                    che andremo a vedere useremo questo useEffect per non far ripetere all'infito i nosti dati, andando nel
-                    pratico: <code>useEffect(() => {
-                        <span class="blue"> //cosa chiamare </span>
-                    }, [<span class="blue">//quando chiamare(1 volta)</span>])</code>
-                </div>
-            </div>
-
-            <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio di useEffect:</strong></div>
-
-            <!-- Esempio -->
-            <div class="row d-flex justify-content-center" data-aos="zoom-in">
-                <div class="col-11">
-                    <pre class="Code_Style">
-                        <code>
-    <span class="orange">import</span> React, <span class="orange">{</span> useState, useEffect <span class="orange">}</span> from <span class="green">'react'</span>
-
-    <span class="orange">const</span> App <span class="orange">=()=>{</span>
-        <span class="orange">const</span> <span class="purple">[</span>arrayPera, setArrayPera<span class="purple">]</span> <span class="orange">=</span> useState<span class="purple">(</span><span class="blue">[]</span><span class="purple">)</span>
-    
-        useEffect<span class="purple">(</span><span class="blue">()</span> <span class="orange">=></span> <span class="blue">{</span>
-            scarica<span class="orange">()</span>
-        <span class="blue">}</span>, <span class="blue">[]</span><span class="purple">)</span>
-    
-        <span class="orange">const</span> URL <span class="orange">=</span> <span class="green">"https://raw.githubusercontent.com/icobasco/sample_data_files/master/pera_misure_sample.json"</span>
-    
-        <span class="orange">const</span> scarica <span class="orange">=</span><span class="purple">()</span><span class="orange">=></span><span class="purple">{</span>
-            fetch<span class="blue">(</span>URL<span class="blue">)</span>
-            .then<span class="blue">(</span><span class="orange">(</span>testo<span class="orange">)=></span>testo.json<span class="orange">()</span><span class="blue">)</span>
-            .then<span class="blue">(</span><span class="orange">(</span>pera<span class="orange">)=>{</span>
-                pera.map<span class="purple">(</span><span class="blue">(</span>elemento, indice<span class="blue">)</span><span class="orange">=></span><span class="blue">{</span>
-                    setArrayPera<span class="orange">(</span><span class="purple">(</span>arrayPera<span class="purple">)</span><span class="orange">=></span><span class="purple">[</span><span class="orange">...</span>arrayPera, <span><</span>div><span class="blue">{</span>elemento.data.sensor1.lowRes.humidity <span class="orange">+</span> <span class="green">" "</span> <span class="orange">+</span> elemento.data.sensor1.lowRes.temperature <span class="orange">+</span> <span class="green">" "</span> <span class="blue">}</span><span><</span>/div><span class="purple">]</span><span class="orange">)</span>
-                <span class="blue">}</span><span class="purple">)</span>
-            <span class="orange">}</span><span class="blue">)</span>
-        <span class="orange">}</span>
-    
-        <span class="orange">return</span><span class="purple">(</span>
-            <span><</span>div><span class="blue">{</span>arrayPera<span class="blue">}</span><span><</span>/div>
-        <span class="purple">)</span>
-    <span class="orange">}</span></code>
-                    </pre>
-                </div>
-            </div>
-
-            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è useRef</strong></div>
-
-            <div class="row d-flex justify-content-center" data-aos="flip-left">
-                <a NAME="useRef"></a>
-                <div class="col-11 Contenitore-Spiegazione" >
-                    UseRef, come ho detto prima è un Hooks, che ci permette di andar a prendere tutti gli attributi cha ha div, ad esempio,
-                    lo useRef si usa solitamente al posto di querySelector. Dopo aver importato lo stato, la sintassi per lo useRef è questa: 
-                    <code>const nomeVar = useRef(null)</code> da come puoi intuire nomeVar è il nome che scegli di dare al tuo Ref e imposti il 
-                    valore iniziale a null e se in tal caso voui prendere il testo specifico di un div farai: <code>nomeVar.current.textContent</code>.
-                </div>
-            </div>
-
-            <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio di useRef:</strong></div>
-
-            <!-- Esempio -->
-            <div class="row d-flex justify-content-center" data-aos="zoom-in">
-                <div class="col-11">
-                    <pre class="Code_Style">
-                        <code>
-    <span class="orange">import</span> React, {useRef} <span class="orange">from</span> 'react'
-    <span class="orange">import</span> <span class="green">'./App.css'</span>
-    
-    <span class="orange">const</span> App <span class="orange">=()=>{</span>
-        <span class="orange">const</span> prendiTesto <span class="orange">=</span> useRef<span class="purple">(</span><span class="blue">null</span><span class="purple">)</span>
-    
-        <span class="orange">const</span> ValoreRef <span class="orange">=</span><span class="purple">()</span><span class="orange">=></span><span class="purple">{</span>
-            console.log<span class="blue">(</span>prendiTesto<span class="blue">)</span>
-        <span class="purple">}</span>
-    
-        <span class="orange">return</span><span class="purple">(</span>
-        <span><</span>div>
-            <span><</span>div ref<span class="orange">=</span><span class="blue">{</span>prendiTesto<span class="blue">}</span>>ciao testo<span><</span>/div>
-            <span><</span>button onClick<span class="orange">=</span><span class="blue">{</span>ValoreRef<span class="blue">}</span>>Prendi Valore Ref<span><</span>/button>
-        <span><</span>/div>
-        <span class="purple">)</span>
-    <span class="orange">}</span>
-    
-    <span class="orange">export default</span> App
-                        </code>
-                    </pre>
-                </div>
-            </div>
-
-        <!-- Creazione di un tabellone per i componenti -->
-        <div class="row mt-5">
-            <a NAME="Componenti"></a>
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12 bastone"></div>
-                </div>
-            </div>
-            <!-- Sostenitori Tabellone -->
-            <div class="col-2"></div>
-
-            <div class="col-4 d-flex justify-content-center">
-                <div class="cerchio1 d-flex justify-content-center align-items-center">
-                    <div class="buco1"></div>
-                </div>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-center">
-                <div class="cerchio2 d-flex justify-content-center align-items-center">
-                    <div class="buco2"></div>
-                </div>
-            </div>
-
-            <div class="col-2"></div>
-
-            <!-- Catene Tabellone -->
-            <div class="col-2"></div>
-
-            <div class="col-4 d-flex justify-content-center">
-                <div class="catena1"></div>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-center">
-                <div class="catena2"></div>
-            </div>
-
-            <div class="col-2"></div>
-
-            <!-- Tabellone con scritta -->
-            <div class="col-3"></div>
-
-            <div class="col-6 d-flex justify-content-center">
-                <div class="Tabellone d-flex align-items-center justify-content-center ">
-                    <div class="row Contenitore-Title ">
-                        <h1 class="Introduzione-Title2"><font> Componenti </font> </h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3"></div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cos'è un componente</strong></div>
-
-            <div class="row d-flex justify-content-center" data-aos="flip-up">
-                <div class="col-11 Contenitore-Spiegazione" >
-                    <p class="Centra-Testo"> 
-                        Un componente semplicemente ti permette di suddividere l'interfaccia dell'utente del tuo progetto
-                        in pezzi piccoli, così da rendere il codice più leggibile e funzionale.
-                    </p>
-                </div>
-            </div>
-        
-
-            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Esempio componenti</strong></div>
-
-            <!-- app.js -->
-            <div class="row d-flex justify-content-center" data-aos="zoom-in">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-11 d-flex align-items-center">
-                    <pre class="Code_Style_No_Bord">
-                        <div class="Code_Style_Up"> <strong>App.js</strong> </div> 
-                        <code>
-    <span class="orange">import</span> <span class="green">'./App.css'</span>
-    <span class="orange">import</span> Header <span class="orange">from</span> <span class="green">"./Header.js"</span>
-    
-    <span class="orange">const</span> App <span class="orange">=()=></span>
-    
-        <span class="orange">return</span> <span class="purple">(</span>
-        <span><</span>div>
-            <span class="green"><</span><span class="green">Header/></span>
-        <span><</span>/div>
-        <span class="purple">)</span>
-    <span class="orange">}</span>
-    
-    <span class="orange">export default</span> App</code>
-                </pre>
-
-                </div>
-
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-11">
-                    <pre class="Code_Style_No_Bord">
-                        <div class="Code_Style_Up"> <strong>Header.js</strong> </div> 
-                        <code>
-    <span class="orange">import</span> React <span class="orange">from</span> <span class="green">'react'</span>
-    <span class="orange">import</span> <span class="green">"./Header.css"</span>
-    
-    <span class="orange">const</span> Header <span class="orange">=()=>{</span>
-        
-        <span class="orange">return</span> (
-            <span><</span>div className<span class="orange">=</span><span class="green">"header"</span>>
-                <span><</span>div>
-                    <span><</span>img width<span class="orange">=</span><span class="green">"200"</span> src<span class="orange">=</span><span class="green">"./YourSrc"</span>/>
-                <span><</span>/div>
-                <span><</span>div className<span class="orange">=</span><span class="green">"link"</span>>
-                    <span><</span>div> elem1 <span><</span>/div>
-                    <span><</span>div> elem2 <span><</span>/div>
-                    <span><</span>div> elem3 <span><</span>/div>
-                    <span><</span>div> elem4 <span><</span>/div>
-                <span><</span>/div>
-            <span><</span>/div>
-        )
-    }
-    
-    <span class="orange">export default</span> Header</code>
-                </pre>
-
-                </div>
-            </div>
-        
-
-            <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Passaggio di parametri</strong></div>
-
-            <div class="row justify-content-center" data-aos="fade-up-left">
-                <div class="col-11 Contenitore-Spiegazione d-flex align-items-center">
-                    Tra le componenti possiamo passare dei parametri, Tutto ciò è possibile grazie ai props(ovvero
-                    quando React incontra un elemento che rappresenta un componente definito dall'utente, 
-                    passa gli attributi JSX ed i figli a questo componente come un singolo oggetto)
-                </div>
-            </div>
-
-            <div class=" SubTitle mt-In" data-aos="fade-up-right"><strong class="Subtext">Esempio passaggio di parametri:</strong></div>
-
-            <div class="row d-flex justify-content-center" data-aos="zoom-out-down">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-11">
-                    <pre class="Code_Style_No_Bord">
-                        <div class="Code_Style_Up"> <strong>App.js</strong> </div> 
-                        <code>
-    <span class="orange">import</span> <span class="green">'./App.css'</span>
-    <span class="orange">import</span> Header <span class="orange">from</span> <span class="green">"./Header.js"</span>
-    
-    <span class="orange">const</span> App <span class="orange">=()=></span>
-        <span class="orange">let</span> mieiParametri<span class="orange">=</span><span class="purple">{</span>
-            pathlogo : <span class="green">"https://53.fs1.hubspotusercontent-na1.net/hub/53/hubfs/image8-2.jpg?width=893&height=600&name=image8-2.jpg"</span>,
-            link1:<span class="blue">{</span>
-                url:<span class="green">"https://www.google.it"</span>,
-                anchor:<span class="green">"GOOGLE"</span>
-            <span class="blue">}</span>,
-            link2:<span class="blue">{</span>
-                url:<span class="green">"https://www.bing.it"</span>,
-                anchor:<span class="green">"BING"</span> 
-            <span class="blue">}</span>,
-            link3:<span class="blue">{</span>
-                url:<span class="green">"https://www.msn.it"</span>,
-                anchor:<span class="green">"MSN"</span> 
-            <span class="blue">}</span>,
-            link4:<span class="blue">{</span>
-                url:<span class="green">"https://www.yahoo.it"</span>,
-                anchor:<span class="green">"YAHOO"</span> 
-            <span class="blue">}</span>
-        <span class="purple">}</span>
-    
-        <span class="orange">return</span> <span class="purple">(</span>
-        <span><</span>div>
-            <span class="green"><</span><span class="green">Header</span> valori<span class="orange">=</span><span class="blue">{</span>mieiParametri<span class="blue">}</span><span class="green">/></span>
-        <span><</span>/div>
-        <span class="purple">)</span>
-    <span class="orange">}</span>
-    
-    <span class="orange">export default</span> App</code>
-                </pre>
-
-                </div>
-
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-11 d-flex align-items-center">
-                    <pre class="Code_Style_No_Bord">
-                        <div class="Code_Style_Up"> <strong>Header.js</strong> </div> 
-                        <code>
-    <span class="orange">import</span> React <span class="orange">from</span> <span class="green">'react'</span>
-    <span class="orange">import</span> <span class="green">"./Header.css"</span>
-    
-    <span class="orange">const</span> Header <span class="orange">=(</span>props<span class="orange">)=>{</span>
-        
-        <span class="orange">return</span> (
-            <span><</span>div className<span class="orange">=</span><span class="green">"header"</span>>
-                <span><</span>div>
-                    <span><</span>img width<span class="orange">=</span><span class="green">"200"</span> src<span class="orange">=</span><span class="blue">{</span>props.valori.pathlogo<span class="blue">}</span>/>
-                <span><</span>/div>
-                <span><</span>div className<span class="orange">=</span><span class="green">"link"</span>>
-                    <span><</span>div> <span><</span>a href<span class="orange">=</span><span class="blue">{</span>props.valori.link1.url<span class="blue">}</span>> <span class="blue">{</span>props.valori.link1.anchor<span class="blue">}</span> <span><</span>/a> <span><</span>/div>
-                    <span><</span>div> <span><</span>a href<span class="orange">=</span><span class="blue">{</span>props.valori.link2.url<span class="blue">}</span>> <span class="blue">{</span>props.valori.link2.anchor<span class="blue">}</span> <span><</span>/a> <span><</span>/div>
-                    <span><</span>div> <span><</span>a href<span class="orange">=</span><span class="blue">{</span>props.valori.link3.url<span class="blue">}</span>> <span class="blue">{</span>props.valori.link3.anchor<span class="blue">}</span> <span><</span>/a> <span><</span>/div>
-                    <span><</span>div> <span><</span>a href<span class="orange">=</span><span class="blue">{</span>props.valori.link4.url<span class="blue">}</span>> <span class="blue">{</span>props.valori.link4.anchor<span class="blue">}</span> <span><</span>/a> <span><</span>/div>
-                <span><</span>/div>
-            <span><</span>/div>
-        )
-    }
-    
-    <span class="orange">export default</span> Header</code>
-                </pre>
-
-                </div>
-    
-            </div>
-
-            <div class="row mt-5" >
-                <a NAME="Boot"></a>
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-12 bastone"></div>
-                    </div>
-                </div>
-                <!-- Sostenitori Tabellone -->
-                <div class="col-2"></div>
-
-                <div class="col-4 d-flex justify-content-center">
-                    <div class="cerchio1 d-flex justify-content-center align-items-center">
-                        <div class="buco1"></div>
-                    </div>
-                </div>
+        <!-- INIZIO GUIDA -->
+        <div class="container mt-6">
+            <div class="ghome">
                 
-                <div class="col-4 d-flex justify-content-center">
-                    <div class="cerchio2 d-flex justify-content-center align-items-center">
-                        <div class="buco2"></div>
-                    </div>
-                </div>
-
-                <div class="col-2"></div>
-
-                <!-- Catene Tabellone -->
-                <div class="col-2"></div>
-
-                <div class="col-4 d-flex justify-content-center">
-                    <div class="catena1"></div>
-                </div>
-                
-                <div class="col-4 d-flex justify-content-center">
-                    <div class="catena2"></div>
-                </div>
-
-                <div class="col-2"></div>
-
-                <!-- Tabellone con scritta -->
-                <div class="col-3"></div>
-
-                <div class="col-6 d-flex justify-content-center">
-                    <div class="Tabellone d-flex align-items-center justify-content-center ">
-                        <div class="row Contenitore-Title ">
-                            <h1 class="Introduzione-Title2"><font> Bootstrap </font> </h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-3"></div>
-            </div>
-
-            <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Spiegazione Bootstrap</strong></div>
-
-            <div class="row d-flex justify-content-center" data-aos="flip-up">
-                <div class="col-11 Contenitore-Spiegazione" >
-                    <p> 
-                        Bootstrap è una libreria che ci permette di rendere i nostri siti responsive. In react
-                        si può pure usare questa libreria, ci sono due metodi in cui possiamo usare bootstrap su
-                        react e sono, uno con i moduli e l'altro con i cdn che abbiamo sempre usato. 
-                    </p>
-                </div>
-            </div>
-
-            <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Bootstrap x CDN</strong></div>
-
-        <div class="row d-flex justify-content-center" data-aos="flip-up">
-            <div class="col-11 Contenitore-Spiegazione d-flex">
-                <pre> <code class="purple" id="myInput"><span><</span>link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></code></pre>
-                <div onclick="copyContent()" class="button-copy"><strong class="pad">Copy</strong> </div>
             </div>
         </div>
-
-        <div class="row d-flex justify-content-center mt-5" data-aos="flip-up">
-            <div class="col-11 Contenitore-Spiegazione d-flex">
-                <pre><code class="purple" id="myInput2"><span><</span>script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"><span><</span>/script>
-<span><</span>script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"><span><</span>/script>
-<span><</span>script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"><span><</span>/script>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</code></pre>
-                <div onclick="copyContent2()" class="button-copy"><strong class="pad">Copy</strong> </div>
-            </div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Dove mettere i CDN</strong></div>
-
-        <div class="row d-flex justify-content-center" data-aos="fade-up-left">
-            <div class="col-11 Contenitore-Spiegazione mt-3">
-                <p class="Centra-Testo"> 
-                    Per applicare bootstrap con i cdn dobbiamo andare nella cartella public e poi una volta aperta essa cerchiamo il file
-                    index.html, una volta fatto ciò metti il link del css nel head e nel body vai a mettere i tre script.
-                </p>
-            </div>
-        </div>
-
-        <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio Bootstrap x CDN</strong></div>
-
-        <div class="row justify-content-center" data-aos="flip-down">
-            <div class="col-11 d-flex align-items-center justify-content-center">
-                <div class="mb-3">
-                    <img src="./image/BootstrapCdn.png" alt="String Template" class="img-fluid img-thumbnail">
-                </div>
-            </div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Bootstrap x Moduli</strong></div>
-
-        <div class="row d-flex justify-content-center" data-aos="flip-left">
-            <div class="col-11 Contenitore-Spiegazione" >
-                <p> 
-                    Prima di applicare Bootstrap con i moduli è giusto che tu sappia che tutte le funzioni di bootstrap che usavamo
-                    utilizzando i CDN, ovvero &nbsp<code><span><</span>div className="col-xl-2">prova<span><</span>/div></code>, con i moduli lo 
-                    andremo a scrivere:&nbsp<code><span><</span>Col xl={2}>prova<span><</span>/Col></code> ed inoltre ogni elemento che andiamo
-                    ad usare dovremmo importarlo.
-                </p>
-            </div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Come scaricare il modulo</strong></div>
+        <!-- FINE GUIDA -->
 
 
-        <div class="row justify-content-center" data-aos="fade-left">
-            <div class="col-11 Contenitore-Spiegazione">
-                    Per scaricare il modulo di bootstrap, dobbiamo prima di tutto entrare nella cartella del progetto in questione; fatto ciò
-                    aprite il prompt di comandi e digitate:&nbsp
-                    <code>npm install react-bootstrap bootstrap</code> 
-                    una volta scaricato il modulo accertiamoci che nella cartella node-modules ci sia: &nbsp<code>react-bootstrap</code>
 
-            </div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-up-right"><strong class="Subtext">Esempio Bootstrap x Moduli:</strong></div>
-
-        <!-- Esempio -->
-        <div class="row d-flex justify-content-center" data-aos="zoom-out-down">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-11">
-                <pre class="Code_Style_No_Bord">
-                    <div class="Code_Style_Up"> <strong>App.js</strong> </div> 
-                    <code>
-    <span class="orange">import</span> <span class="green">'bootstrap/dist/css/bootstrap.min.css'</span>;  
-    <span class="orange">import</span> <span class="orange">{</span>Container , Row, Col, Nav, Navbar<span class="orange">}</span> <span class="orange">from</span> <span class="green">'react-bootstrap'</span>
-    <span class="orange">import</span> React <span class="orange">from</span> <span class="green">'react'</span>
-    <span class="orange">import</span> <span class="green">"./App.css"</span>
-    
-    <span class="orange">const</span> App <span class="orange">=()=>{</span>
-        
-        <span class="orange">return</span> <span class="purple">(</span>
-            <<span class="green">Container</span> fluid>
-    
-                <<span class="green">Row</span> className<span class="orange">=</span><span class="green">"justify-content-center bg-dark"</span>>
-                    <<span class="green">Col</span> xl<span class="orange">=</span><span class="blue">{</span>2<span class="blue">}</span> lg<span class="orange">=</span><span class="blue">{</span>2<span class="blue">}</span> md<span class="orange">=</span><span class="blue">{</span>3<span class="blue">}</span> className<span class="orange">=</span><span class="green">"d-none d-md-block mt-2 mb-2"</span>>
-                        <span><</span>img width<span class="orange">=</span><span class="green">"60"</span> src<span class="orange">=</span><span class="green">"./TuaImage"</span>/>
-                    <span><</span>/<span class="green">Col</span>>
-                    <<span class="green">Col</span> xl<span class="orange">=</span><span class="blue">{</span>10<span class="blue">}</span> lg<span class="orange">=</span><span class="blue">{</span>10<span class="blue">}</span> md<span class="orange">=</span><span class="blue">{</span>9<span class="blue">}</span> className<span class="orange">=</span><span class="green">"d-flex justify-content-between align-items-center"</span>>
-                        <span><</span>div className<span class="orange">=</span><span class="green">'d-none d-md-block'</span>> elem <span><</span>/div>
-                        <span><</span>div className<span class="orange">=</span><span class="green">'d-none d-md-block'</span>> elem <span><</span>/div>
-                        <span><</span>div className<span class="orange">=</span><span class="green">'d-none d-md-block'</span>> elem <span><</span>/div>
-                        <span><</span>div className<span class="orange">=</span><span class="green">'d-none d-md-block'</span>> elem <span><</span>/div>
-                    <span><</span>/<span class="green">Col</span>>
-    
-                    <<span class="green">Navbar</span> collapseOnSelect expand<span class="orange">=</span><span class="green">"lg"</span> bg<span class="orange">=</span><span class="green">"dark"</span> variant<span class="orange">=</span><span class="green">"dark"</span> className<span class="orange">=</span><span class="green">'d-md-none'</span>>
-                        <<span class="green">Navbar.Brand</span>>
-                            <span><</span>img width<span class="orange">=</span><span class="green">"60"</span> src<span class="orange">=</span><span class="green">"./TuaImage"</span>/>
-                        <span><</span>/<span class="green">Navbar.Brand</span>>
-                        <<span class="green">Navbar.Toggle</span> aria-controls<span class="orange">=</span><span class="green">"responsive-navbar-nav"</span>/>
-                        <<span class="green">Navbar.Collapse</span> id<span class="orange">=</span><span class="green">"responsive-navbar-nav"</span>>
-                            <<span class="green">Nav</span>>
-                                <<span class="green">Nav.link</span>> elem <span><</span>/<span class="green">Nav.link</span>>
-                                <<span class="green">Nav.link</span>> elem <span><</span>/<span class="green">Nav.link</span>>
-                            <span><</span>/<span class="green">Nav</span>>
-                            <<span class="green">Nav</span>>
-                                <<span class="green">Nav.link</span>> elem <span><</span>/<span class="green">Nav.link</span>>
-                                <<span class="green">Nav.link</span>> elem <span><</span>/<span class="green">Nav.link</span>>
-                            <span><</span>/<span class="green">Nav</span>>
-                        <span><</span>/<span class="green">Navbar.Collapse</span>>
-                    <span><</span>/<span class="green">Navbar</span>>
-                <span><</span>/<span class="green">Row</span>>
-            <span><</span>/<span class="green">Container</span>>
-        <span class="purple">)</span>
-    <span class="orange">}</span>
-    
-    <span class="orange">export default</span> App</code>
-            </pre>
-
-            </div>
-
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-11 col-11 d-flex align-items-center">
-                <pre class="Code_Style_No_Bord">
-                    <div class="Code_Style_Up"> <strong>App.css</strong> </div> 
-        <code>.<span class="green">header</span><span class="light-green">{
-        display: flex;
-        justify-content: space-between; 
-        background-color: lightblue;
-    }</span>
-    
-    .<span class="green">link</span><span class="light-green">{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }</span>
-    
-    a<span class="light-green">{
-        text-decoration: none;
-        color: white;
-    }</span>
-    
-    a:<span class="green">hover</span><span class="light-green">{
-        padding: 10px;
-        border: 1px solid black;
-        background-color: blue;
-        border-radius: 20px;
-    }</span></code>
-            </pre>
-
-            </div>
-
-        </div>
-
-        <!-- Creazione di un tabellone per Tipi di Target -->
-        <div class="row mt-5">
-            <a NAME="TipiTargetS"></a>
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12 bastone"></div>
-                </div>
-            </div>
-            <!-- Sostenitori Tabellone -->
-            <div class="col-2"></div>
-
-            <div class="col-4 d-flex justify-content-center">
-                <div class="cerchio1 d-flex justify-content-center align-items-center">
-                    <div class="buco1"></div>
-                </div>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-center">
-                <div class="cerchio2 d-flex justify-content-center align-items-center">
-                    <div class="buco2"></div>
-                </div>
-            </div>
-
-            <div class="col-2"></div>
-
-            <!-- Catene Tabellone -->
-            <div class="col-2"></div>
-
-            <div class="col-4 d-flex justify-content-center">
-                <div class="catena1"></div>
-            </div>
-            
-            <div class="col-4 d-flex justify-content-center">
-                <div class="catena2"></div>
-            </div>
-
-            <div class="col-2"></div>
-
-            <!-- Tabellone con scritta -->
-            <div class="col-3"></div>
-
-            <div class="col-6 d-flex justify-content-center">
-                <div class="Tabellone d-flex align-items-center justify-content-center ">
-                    <div class="row Contenitore-Title ">
-                        <h1 class="Introduzione-Title2"><font> Tipi Di Target </font> </h1>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3"></div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Cosa sono i Target?</strong></div>
-
-        <div class="row d-flex justify-content-center" data-aos="flip-up">
-            <div class="col-11 Contenitore-Spiegazione" >
-                <p> 
-                    In React, event.target si riferisce all'elemento DOM che ha scatenato l'evento. Ci sono diversi tipi di event.target in React, 
-                    ecco una breve introduzione per tutti quelli che andremo a visionare in questa guida: <br>
-                    <a class="light-blue link" href="#target">- event.target </a> <br>
-                    <a class="light-blue link" href="#CurrentTarget">- event.currentTarget </a>
-                </p>
-            </div>
-        </div>
-
-        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">Target</strong></div>
-
-        <div class="row d-flex justify-content-center" data-aos="flip-up">
-            <a NAME="target"></a>
-            <div class="col-11 Contenitore-Spiegazione" >
-                <p> 
-                    In React, event.target è una proprietà dell'oggetto evento (event) che rappresenta l'elemento del DOM che ha effettivamente scatenato l'evento. 
-                    In altre parole, event.target restituisce un riferimento all'elemento HTML su cui è stato effettivamente verificato l'evento.
-                </p>
-            </div>
-        </div>
-
-        <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio event.target</strong></div>
-
-        <!-- Esempio -->
-        <div class="row d-flex justify-content-center" data-aos="zoom-in">
-            <div class="col-11">
-                <pre class="Code_Style">
-                    <code>
-    <span class="orange">import</span> React <span class="orange">from</span> 'react'
-    <span class="orange">import</span> <span class="green">'./App.css'</span>
-    
-    <span class="orange">const</span> App <span class="orange">=()=>{</span>
-    
-        <span class="orange">const</span> evento <span class="orange">=</span><span class="purple">(</span>event<span class="purple">)</span><span class="orange">=></span><span class="purple">{</span>
-            console.log<span class="blue">(</span>event.target<span class="blue">)</span>
-        <span class="purple">}</span>
-    
-        <span class="orange">return</span><span class="purple">(</span>
-            <span><</span>div>
-                <span><</span>div onClick<span class="orange">=</span><span class="blue">{</span>evento<span class="blue">}</span>>
-                    <span><</span>div>noi siamo <span><</span>/div>
-                    <span><</span>div>home <span><</span>/div>
-                <span><</span>/div>
-            <span><</span>/div>
-        <span class="purple">)</span>
-    <span class="orange">}</span>
-    
-    <span class="orange">export default</span> App
-                    </code>
-                </pre>
-            </div>
-        </div>
-
-
-        <div class=" SubTitle mt-In" data-aos="fade-down-right"><strong class="Subtext">currentTarget</strong></div>
-
-        <div class="row d-flex justify-content-center" data-aos="flip-up">
-            <a NAME="CurrentTarget"></a>
-            <div class="col-11 Contenitore-Spiegazione" >
-                <p> 
-                    In React, event.currentTarget è una proprietà dell'oggetto evento (event) che rappresenta l'elemento su cui è stato associato l'evento. 
-                    A differenza di event.target, che restituisce l'elemento che ha effettivamente scatenato l'evento, event.currentTarget restituisce sempre 
-                    lo stesso elemento, indipendentemente da dove l'evento è stato scatenato all'interno di esso.
-                </p>
-            </div>
-        </div>
-
-        <div class="SubTitle mt-In" data-aos="fade-right"><strong class="Subtext">Esempio event.currentTarget</strong></div>
-
-        <!-- Esempio -->
-        <div class="row d-flex justify-content-center" data-aos="zoom-in">
-            <div class="col-11">
-                <pre class="Code_Style">
-                    <code>
-    <span class="orange">import</span> React <span class="orange">from</span> 'react'
-    <span class="orange">import</span> <span class="green">'./App.css'</span>
-    
-    <span class="orange">const</span> App <span class="orange">=()=>{</span>
-    
-        <span class="orange">const</span> evento <span class="orange">=</span><span class="purple">(</span>event<span class="purple">)</span><span class="orange">=></span><span class="purple">{</span>
-            console.log<span class="blue">(</span>event.currentTarget<span class="blue">)</span>
-        <span class="purple">}</span>
-    
-        <span class="orange">return</span><span class="purple">(</span>
-            <span><</span>div>
-                <span><</span>div onClick<span class="orange">=</span><span class="blue">{</span>evento<span class="blue">}</span>>
-                    <span><</span>div>noi siamo <span><</span>/div>
-                    <span><</span>div>home <span><</span>/div>
-                <span><</span>/div>
-            <span><</span>/div>
-        <span class="purple">)</span>
-    <span class="orange">}</span>
-    
-    <span class="orange">export default</span> App
-                    </code>
-                </pre>
-            </div>
-        </div>
-
-
+        <!-- INIZIO ALERT TESTO COPIATO -->
         <div class="alert alert-success alert-dismissible fade show fixed-bottom confermaAlert invisible d-flex align-items-center" role="alert">
             <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
             &nbsp; <strong>Copiato!</strong>&nbsp;Testo copiato con successo!.
@@ -1082,55 +86,67 @@
               <span aria-hidden="true">&times;</span>
             </button>
         </div>
+        <!-- FINE ALERT TESTO COPIATO -->
 
+
+
+        <!-- INIZIO BOTTONE SCROLLA SU -->
+        <button id="scrollToTopBtn" onclick="scrollToTop()">&#8593;</button>
+        <!-- FINE BOTTONE SCROLLA SU -->
+        
+
+
+        <!-- INIZIO FOOTER -->
         <div class="row">
-            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
+            <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 345" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
                 .path-0{
-                  animation:pathAnim-0 4s;
-                  animation-timing-function: linear;
-                  animation-iteration-count: infinite;
+                animation:pathAnim-0 4s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
                 }
-                @keyframes pathAnim-0{
-                  0%{
-                    d: path("M 0,400 C 0,400 0,200 0,200 C 112.48803827751198,174.57416267942585 224.97607655502395,149.14832535885168 314,148 C 403.02392344497605,146.85167464114832 468.5837320574162,169.98086124401917 566,170 C 663.4162679425838,170.01913875598083 792.688995215311,146.92822966507177 888,160 C 983.311004784689,173.07177033492823 1044.6602870813397,222.3062200956938 1131,235 C 1217.3397129186603,247.6937799043062 1328.6698564593303,223.8468899521531 1440,200 C 1440,200 1440,400 1440,400 Z");
-                  }
-                  25%{
-                    d: path("M 0,400 C 0,400 0,200 0,200 C 87.80861244019138,229.7511961722488 175.61722488038276,259.5023923444976 283,242 C 390.38277511961724,224.49760765550238 517.3397129186603,159.74162679425837 612,161 C 706.6602870813397,162.25837320574163 769.023923444976,229.5311004784689 848,252 C 926.976076555024,274.4688995215311 1022.5645933014355,252.13397129186603 1124,236 C 1225.4354066985645,219.86602870813397 1332.7177033492821,209.93301435406698 1440,200 C 1440,200 1440,400 1440,400 Z");
-                  }
-                  50%{
-                    d: path("M 0,400 C 0,400 0,200 0,200 C 76.13397129186606,213.1196172248804 152.26794258373212,226.23923444976077 247,229 C 341.7320574162679,231.76076555023923 455.06220095693766,224.16267942583733 572,222 C 688.9377990430623,219.83732057416267 809.4832535885168,223.11004784688998 908,207 C 1006.5167464114832,190.88995215311002 1083.0047846889952,155.39712918660285 1168,151 C 1252.9952153110048,146.60287081339715 1346.4976076555024,173.30143540669857 1440,200 C 1440,200 1440,400 1440,400 Z");
-                  }
-                  75%{
-                    d: path("M 0,400 C 0,400 0,200 0,200 C 82.26794258373207,159.78947368421052 164.53588516746413,119.57894736842107 268,130 C 371.46411483253587,140.42105263157893 496.12440191387554,201.4736842105263 590,218 C 683.8755980861245,234.5263157894737 746.9665071770336,206.52631578947367 846,180 C 945.0334928229664,153.47368421052633 1080.0095693779904,128.42105263157896 1185,132 C 1289.9904306220096,135.57894736842104 1364.9952153110048,167.78947368421052 1440,200 C 1440,200 1440,400 1440,400 Z");
-                  }
-                  100%{
-                    d: path("M 0,400 C 0,400 0,200 0,200 C 112.48803827751198,174.57416267942585 224.97607655502395,149.14832535885168 314,148 C 403.02392344497605,146.85167464114832 468.5837320574162,169.98086124401917 566,170 C 663.4162679425838,170.01913875598083 792.688995215311,146.92822966507177 888,160 C 983.311004784689,173.07177033492823 1044.6602870813397,222.3062200956938 1131,235 C 1217.3397129186603,247.6937799043062 1328.6698564593303,223.8468899521531 1440,200 C 1440,200 1440,400 1440,400 Z");
-                  }
-                }</style><path d="M 0,400 C 0,400 0,200 0,200 C 112.48803827751198,174.57416267942585 224.97607655502395,149.14832535885168 314,148 C 403.02392344497605,146.85167464114832 468.5837320574162,169.98086124401917 566,170 C 663.4162679425838,170.01913875598083 792.688995215311,146.92822966507177 888,160 C 983.311004784689,173.07177033492823 1044.6602870813397,222.3062200956938 1131,235 C 1217.3397129186603,247.6937799043062 1328.6698564593303,223.8468899521531 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#1c2226" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
-            </div>
-            
-            <div class="row sticky p-3 justify-content-center color1">
-                
-                <div class="col-6 col-lg-4 col-xl-4 col-sm-6 col-md-4">
-                    <h5>- Chi Sono?</h5>
-                    <p  style="color: white;">Sono Luca ho 17 anni è frequento la 4 ITIS INFO. <br> A.S 2022/2023</p>
-                </div>
-    
-                <div class="col-6 col-lg-4 col-xl-4 col-sm-6 col-md-4">
-                    <h5>- Come nasce il progetto?</h5>
-                    <p  style="color: white;">Questo progetto nasce sotto consiglio del prof di TPSIT, consigliandoci di farci una guida personale.</p>
-                </div>
-    
-            </div>
-            
+            @keyframes pathAnim-0{
+              0%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 112.48803827751198,174.57416267942585 224.97607655502395,149.14832535885168 314,148 C 403.02392344497605,146.85167464114832 468.5837320574162,169.98086124401917 566,170 C 663.4162679425838,170.01913875598083 792.688995215311,146.92822966507177 888,160 C 983.311004784689,173.07177033492823 1044.6602870813397,222.3062200956938 1131,235 C 1217.3397129186603,247.6937799043062 1328.6698564593303,223.8468899521531 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+              25%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 87.80861244019138,229.7511961722488 175.61722488038276,259.5023923444976 283,242 C 390.38277511961724,224.49760765550238 517.3397129186603,159.74162679425837 612,161 C 706.6602870813397,162.25837320574163 769.023923444976,229.5311004784689 848,252 C 926.976076555024,274.4688995215311 1022.5645933014355,252.13397129186603 1124,236 C 1225.4354066985645,219.86602870813397 1332.7177033492821,209.93301435406698 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+              50%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 76.13397129186606,213.1196172248804 152.26794258373212,226.23923444976077 247,229 C 341.7320574162679,231.76076555023923 455.06220095693766,224.16267942583733 572,222 C 688.9377990430623,219.83732057416267 809.4832535885168,223.11004784688998 908,207 C 1006.5167464114832,190.88995215311002 1083.0047846889952,155.39712918660285 1168,151 C 1252.9952153110048,146.60287081339715 1346.4976076555024,173.30143540669857 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+              75%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 82.26794258373207,159.78947368421052 164.53588516746413,119.57894736842107 268,130 C 371.46411483253587,140.42105263157893 496.12440191387554,201.4736842105263 590,218 C 683.8755980861245,234.5263157894737 746.9665071770336,206.52631578947367 846,180 C 945.0334928229664,153.47368421052633 1080.0095693779904,128.42105263157896 1185,132 C 1289.9904306220096,135.57894736842104 1364.9952153110048,167.78947368421052 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+              100%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 112.48803827751198,174.57416267942585 224.97607655502395,149.14832535885168 314,148 C 403.02392344497605,146.85167464114832 468.5837320574162,169.98086124401917 566,170 C 663.4162679425838,170.01913875598083 792.688995215311,146.92822966507177 888,160 C 983.311004784689,173.07177033492823 1044.6602870813397,222.3062200956938 1131,235 C 1217.3397129186603,247.6937799043062 1328.6698564593303,223.8468899521531 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+            }</style><path d="M 0,400 C 0,400 0,200 0,200 C 112.48803827751198,174.57416267942585 224.97607655502395,149.14832535885168 314,148 C 403.02392344497605,146.85167464114832 468.5837320574162,169.98086124401917 566,170 C 663.4162679425838,170.01913875598083 792.688995215311,146.92822966507177 888,160 C 983.311004784689,173.07177033492823 1044.6602870813397,222.3062200956938 1131,235 C 1217.3397129186603,247.6937799043062 1328.6698564593303,223.8468899521531 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#28242c" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
         </div>
+
+        <div class="row sticky color1 justify-content-center">
+
+            <div class="col-6 col-lg-4 col-xl-4 col-sm-6 col-md-4" style="color: white;">
+                <h5>- Chi Sono?</h5>
+                <p>Sono Luca ho 17 anni è frequento la 4 ITIS INFO. <br> A.S 2022/2023</p>
+            </div>
+
+            <div class="col-6 col-lg-4 col-xl-4 col-sm-6 col-md-4 mb-5" style="color: white;">
+                <h5>- Come nasce il progetto?</h5>
+                <p>Questo progetto nasce sotto consiglio del prof di TPSIT, consigliandoci di farci una guida personale.</p>
+            </div>
+
+        </div>
+        <!-- FINE FOOTER -->
     
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    </div>
+    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
