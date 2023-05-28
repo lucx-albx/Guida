@@ -193,24 +193,18 @@ const carica_guida_react =()=>{
 
 const copyContent = async (el) => {
     try {
-      const text = el.previousElementSibling.textContent;
-      await navigator.clipboard.writeText(text);
-      showAlert();
+        const text = el.previousElementSibling.textContent;
+        await navigator.clipboard.writeText(text);
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Testo copiato con successo',
+            showConfirmButton: false,
+            timer: 1500
+        })
     } catch (err) {
-      console.error('Failed to copy: ', err);
+        nsole.error('Failed to copy: ', err);
     }
-}
-
-const showAlert =()=> {
-    const myTimeout = setTimeout(chiudiConferma, 1500);
-    let annuncio = document.querySelector(".confermaAlert");
-    annuncio.classList.remove("invisible");
-
-}
-
-const chiudiConferma =()=> {
-    let annuncio = document.querySelector(".confermaAlert");
-    annuncio.classList.add("invisible");
 }
 
 const scrollToTop =()=> {
