@@ -1,0 +1,38 @@
+[
+    {
+        "titolo": "Cos'è il json",
+        "sotto_titolo" : null,
+        "corpo" : "JSON è un formato di serializzazione basato su testo per lo scambio di dati, principalmente tra server e applicazione web. JSON è l'acronimo di JavaScript Object Notation, e utilizza l'estensione di file . json. JSON è un concorrente di XML, ma possiede una sintassi più semplice e compatta rispetto ad esso.",
+        "code" : null,
+        "link": null,
+        "image" : null
+    },
+
+    {
+        "titolo": null,
+        "sotto_titolo" : "#1 Sintassi Json",
+        "corpo" : "Una sintassi del json e ad oggetto che è una serie non ordinata di nomi o valori. Un oggetto inizia con {parentesi graffa sinistra e finisce con }parentesi graffa destra. Ogni nome è seguito da :due punti e la coppia di nome o valore sono separata da ,virgola",
+        "code" : null,
+        "link": null,
+        "image" : "./Img/JSON_OBJECT.png"
+    },
+
+    {
+        "titolo": null,
+        "sotto_titolo" : "#2 Sintassi JSON:",
+        "corpo" : "Un altra sintassi del Json è: un array, ovvero una raccolta ordinata di valori. Un array comincia con [parentesi quadra a sinistra e finisce con la ]parentesi quadra a destra. I valori sono separati da una ,virgola.",
+        "code" : null,
+        "link": null,
+        "image" : "./Img/JSON_ARRAY.png"
+    },
+
+    {
+        "titolo": "<a NAME='FC'></a>Fetch",
+        "sotto_titolo" : null,
+        "corpo" : "La fetch utilizza due .then() nel primo si va 'selezionare' il JSON e nella seconda vengono presi i suoi dati, e all'intero di essa viene fatto un callBack per poi andare a visualizzare questi dati nel nostro sito. Ma vediamo un esempio!",
+        "code" : ["<span class='orange'>const</span> url <span class='orange'>=</span> <span class='green'>'https://raw.githubusercontent.com/icobasco/sample_data_files/master/pera_misure_sample.json'</span>\n\n<span class='orange'>const</span> datiLoading <span class='orange'>=()=></span><span class='purple'>{</span>\n    fetch<span class='purple'>(</span>url<span class='purple'>)</span>\n    .then<span class='purple'>(</span><span class='blue'>(</span>dati<span class='blue'>)</span> <span class='orange'>=></span> dati.json<span class='blue'>()</span><span class='purple'>)</span>\n    .then<span class='purple'>(</span><span class='blue'>(</span>data<span class='blue'>)</span><span class='orange'>=></span><span class='blue'>{</span>\n        <span class='orange'>const</span> dateTable <span class='orange'>=</span> document.querySelector<span class='green'>('table tbody')</span>;\n\n        <span class='orange'>let</span> insert <span class='orange'>=</span> <span class='green'>''</span>\n        data.forEach<span class='orange'>(</span><span class='purple'>function</span><span class='purple'>(</span><span class='blue'>{</span>lora_device_id, data, measured_at<span class='blue'>}</span><span class='purple'>)</span> <span class='purple'>{</span>\n\n            insert <span class='orange'>+=</span> <span class='green'>'<</span><span class='green'>tr>';</span>\n            insert <span class='orange'>+=</span> <span class='green'>`<</span><span class='green'>td></span></span><span class='blue'>${</span>lora_device_id<span class='blue'>}</span><span class='green'><</span><span class='green'>/td>`</span>\n            insert <span class='orange'>+=</span> <span class='green'>`<</span><span class='green'>td></span></span><span class='blue'>${</span>measured_at<span class='blue'>}</span></td><span class='green'><</span><span class='green'>/td>`</span>\n            insert <span class='orange'>+=</span> <span class='green'>`<</span><span class='green'>td></span></span><span class='blue'>${</span>data.sensor1.lowRes.humidity<span class='blue'>}</span><span class='green'><</span><span class='green'>/td>`</span>\n            insert <span class='orange'>+=</span> <span class='green'>`<</span><span class='green'>td></span></span><span class='blue'>${</span>data.sensor1.lowRes.humidity<span class='blue'>}</span><span class='green'><</span><span class='green'>/td>`</span>\n            insert <span class='orange'>+=</span> <span class='green'>'<</span><span class='green'>tr>';</span>\n    \n        <span class='purple'>}</span><span class='orange'>)</span>\n        dateTable.innerHTML <span class='orange'>=</span> insert;\n    <span class='blue'>}</span><span class='purple'>)</span>\n<span class='purple'>}</span>\n"],
+        "link": null,
+        "image" : null
+    }
+
+]

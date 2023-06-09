@@ -49,6 +49,7 @@ const carica_guida_xml =()=>{
                 insert += `<div class="header">`
                 insert += `<span class="title">ESEMPIO</span>`
                 insert += `</div>`
+                insert += `<div class="cpy fas fa-clipboard" onclick="copyCode(this)"></div>`
                 insert += `<div class="editor-content">`
                 insert += `<pre class="code_style"><code>${elem.code}</code></pre>`
                 insert += `</div>`
@@ -84,6 +85,7 @@ const carica_guida_jsa =()=>{
                 insert += `<div class="header">`
                 insert += `<span class="title">ESEMPIO</span>`
                 insert += `</div>`
+                insert += `<div class="cpy fas fa-clipboard" onclick="copyCode(this)"></div>`
                 insert += `<div class="editor-content">`
                 insert += `<pre class="code_style"><code>${elem.code}</code></pre>`
                 insert += `</div>`
@@ -119,6 +121,7 @@ const carica_guida_json =()=>{
                 insert += `<div class="header">`
                 insert += `<span class="title">ESEMPIO</span>`
                 insert += `</div>`
+                insert += `<div class="cpy fas fa-clipboard" onclick="copyCode(this)"></div>`
                 insert += `<div class="editor-content">`
                 insert += `<pre class="code_style"><code>${elem.code}</code></pre>`
                 insert += `</div>`
@@ -161,6 +164,7 @@ const carica_guida_react =()=>{
                     insert += `<div class="header">`
                     insert += `<span class="title">ESEMPIO</span>`
                     insert += `</div>`
+                    insert += `<div class="cpy fas fa-clipboard" onclick="copyCode(this)"></div>`
                     insert += `<div class="editor-content">`
                     insert += `<pre class="code_style"><code>${elem.code[i]}</code></pre>`
                     insert += `</div>`
@@ -180,7 +184,7 @@ const carica_guida_react =()=>{
                     insert += `<div class="row d-flex justify-content-center mt-5" data-aos="flip-up">`
                     insert += `<div class="col-xl-12 col-lg-12 col-11 Contenitore-Spiegazione d-flex">`
                     insert += `<pre class="cpoymode"><code class="purple" id="myInput">${elem.link[i]}</code></pre>`
-                    insert += `<div onclick="copyContent(this)" class="button-copy"><strong class="pad">Copy</strong> </div>`
+                    insert += `<div onclick="copyCdn(this)" class="button-copy"><strong class="pad">Copy</strong> </div>`
                     insert += `</div>`
                     insert += `</div>`
                 }
@@ -191,19 +195,44 @@ const carica_guida_react =()=>{
     })
 }
 
-const copyContent = async (el) => {
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'top',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+})
+
+const copyCdn = async (el) => {
     try {
         const text = el.previousElementSibling.textContent;
         await navigator.clipboard.writeText(text);
-        Swal.fire({
-            position: 'center',
+        Toast.fire({
             icon: 'success',
-            title: 'Testo copiato con successo',
-            showConfirmButton: false,
-            timer: 1500
+            title: 'Testo copiato con successo!'
         })
     } catch (err) {
-        nsole.error('Failed to copy: ', err);
+        console.error('Failed to copy: ', err);
+    }
+}
+
+const copyCode = async (el) => {
+    try {
+        const text = el.nextSibling.textContent;
+        await navigator.clipboard.writeText(text)
+        Toast.fire({
+            icon: 'success',
+            title: 'Testo copiato con successo!'
+        })
+    } catch (err) {
+        Toast.fire({
+            icon: 'error',
+            title: 'Nel copiare il testo è stato riscontrato un problema, riprovare'
+        })
     }
 }
 

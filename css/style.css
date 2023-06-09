@@ -348,4 +348,21 @@ html {
     opacity: 1;
 }
 /* FINE BOTTONE SCROLLA SU */
+
+/* INIZIO button copia */
+.cpy{
+    background-color: #2f2f30;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.cpy:hover{
+    background-color: #3b3b3b;
+    cursor: pointer;
+}
+/* FINE button copia */
   

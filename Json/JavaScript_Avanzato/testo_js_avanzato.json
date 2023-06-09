@@ -1,0 +1,56 @@
+[
+    
+    {
+        "titolo": "JavaScript Avanzato",
+        "sotto_titolo" : null,
+        "corpo" : "JavaScript Avanzato è un modulo che, oltre a insegnarti le caratteristiche principali della programmazione a oggetti in JavaScript, ti insegnerà ES6 (ECMAScript 6 - l'ultima versione di JavaScript)",
+        "code" : null,
+        "link": null,
+        "image" : null
+    },
+
+    {
+        "titolo": "<a NAME='TS'></a>Template String",
+        "sotto_titolo" : null,
+        "corpo" : "Le template string permettono di risolvere i problemi di composizione di una stringa complessa con estrema semplicità ed eleganza. Una template string è una sequenza di caratteri delimitata da backtick ( ` ) al posto di singoli o doppi apici.",
+        "code" : ["<span class='orange'>const</span> stampa <span class='orange'>=()=>{</span>\n    <span class='orange'>let</span> nome <span class='orange'>=</span><span class='green'> 'andrea' </span>\n    <span class='orange'>let</span> cognome <span class='orange'>=</span><span class='green'> 'giordano' </span>\n    \n    console.log<span class='purple'>(</span><span class='green'>'Benvenuto '</span> <span class='orange'>+</span> nome <span class='orange'>+</span> <span class='green'>' '</span> <span class='orange'>+</span> cognome<span class='purple'>)</span>\n    console.log<span class='purple'>(</span><span class='orange'>`</span>benvenuto <span class='blue'>${</span>nome<span class='blue'>}</span> <span class='blue'>${</span>cognome<span class='blue'>}</span><span class='orange'>`</span><span class='purple'>)</span>\n<span class='orange'>}</span>\n"],
+        "link": null,
+        "image" : null
+    },
+
+    {
+        "titolo": "<a NAME='PR'></a>Promise",
+        "sotto_titolo" : null,
+        "corpo" : "Fino a qualche anno fa, le promise nelle applicazioni JavaScript venivano utilizzate sfruttando alcune librerie che implementavano il Promise Pattern. A partire dalle specifiche di ECMAScript 2015, le promise sono diventate un componente nativo del linguaggio. Questa importante novità offre sia il vantaggio di non dipendere da librerie esterne, sia la comodità di stabilire un'API standard per la gestione di codice asincrono basato sul Promise Pattern.",
+        "code" : ["<span class='orange'>let</span> promise <span class='orange'>=</span> <span class='orange'>new</span> promise<span class='orange'>(</span><span class='purple'>function</span><span class='purple'>(</span>resolve, reject<span class='purple'>)</span><span class='purple'>{</span>\n    setTimeout<span class='orange'>(</span><span class='purple'>()</span> <span class='orange'>=></span> resolve<span class='purple'>(</span><span class='green'>'fatto!'</span><span class='purple'>)</span>, 1000<span class='orange'>)</span>\n<span class='purple'>}</span><span class='orange'>)</span>\n"],
+        "link": null,
+        "image" : null
+    },
+
+    {
+        "titolo": "<a NAME='MAP'></a>map",
+        "sotto_titolo" : null,
+        "corpo" : "map(). Il metodo Array.map() ti permette di iterare (l'iterazione, chiamata anche ciclo o con il termine inglese loop, è una struttura di controllo, all'interno di un algoritmo risolutivo di un problema dato, che ordina all'elaboratore di eseguire ripetutamente una sequenza di istruzioni, solitamente fino al verificarsi di particolari) su un array e modificare gli elementi usando una funzione di callback, che verrà eseguita su ognungo degli elementi dell'array",
+        "code" : ["<span class='orange'>let</span> mioArray <span class='orange'>=</span> <span class='orange'>[</span>5,6,7,4,3,2<span class='orange'>]</span>\n\nmioArray.map<span class='orange'>(</span><span class='purple'>(</span>elemento,indice<span class='purple'>)</span><span class='orange'>=></span><span class='purple'>{</span>\n    console.log<span class='purple'>(</span>elemento<span class='purple'>)</span>\n<span class='purple'>}</span><span class='orange'>)</span>\n"],
+        "link": null,
+        "image" : null
+    },
+
+    {
+        "titolo": "<a NAME='DST'></a>Destrutturazione",
+        "sotto_titolo" : null,
+        "corpo" : "In Javascript, la destrutturazione di un array o di un oggetto è una tecnica che permette di creare delle variabili in modo veloce e facilmente comprensibile dalle proprietà di un oggetto o dai valori di un array.",
+        "code" : ["<span class='orange'>let</span> alunno <span class='orange'>=</span> <span class='purple'>{</span>\n    nome: <span class='green'>'mario'</span>,\n    cognome: <span class='green'>'rossi'</span>,\n    eta: <span class='green'>'22'</span>,\n    sesso: <span class='green'>'M'</span>\n<span class='purple'>}</span>\n\n<span class='orange'>const</span> <span class='orange'>{</span>nome: <span class='purple'>nomeA</span>, cognome: <span class='purple'>cognomeA</span><span class='orange'>}</span> <span class='orange'>=</span> alunno <span class='blue'>//alias</span>\n\nconsole.log<span class='purple'>(</span>nomeA <span class='orange'>+</span> <span class='green'>' '</span> <span class='orange'>+</span> cognomeA<span class='purple'>)</span>\n"],
+        "link": null,
+        "image" : null
+    },
+    
+    {
+        "titolo": "<a NAME='OS'></a>Operatore Spread",
+        "sotto_titolo" : null,
+        "corpo" : "L'operatore spread, identificabile con i tre punti (...), serve per fare una copia perfetta di un array",
+        "code" : ["<span class='orange'>const</span> OperatoreSpread <span class='orange'>=()=>{</span>\n\n    <span class='orange'>let</span> ArrayA <span class='orange'>=</span> <span class='purple'>[</span><span class='green'>'map'</span>, <span class='green'>'spread'</span>, <span class='green'>'destrutturazione'</span><span class='purple'>]</span>\n    <span class='orange'>let</span> ArrayB <span class='orange'>=</span> <span class='purple'>[</span><span class='orange'>...</span>ArrayA<span class='purple'>]</span>\n\n    console.log<span class='purple'>(</span>ArrayB<span class='purple'>)</span>\n<span class='orange'>}</span>\n\nOperatoreSpread<span class='orange'>()</span>\n"],
+        "link": null,
+        "image" : null
+    }
+]
