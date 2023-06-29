@@ -3,7 +3,7 @@ const API_XML = "https://raw.githubusercontent.com/lucx-albx/Json_File/main/XML/
 const API_JSA = "https://raw.githubusercontent.com/lucx-albx/Json_File/main/JavaScript_Avanzato/testo_js_avanzato.json"
 const API_REACT = "https://raw.githubusercontent.com/lucx-albx/Json_File/main/React/testo_react.json"
 const API_JSON = "https://raw.githubusercontent.com/lucx-albx/Json_File/main/JSON/testo_json.json"
-const API_MONGODB = "https://raw.githubusercontent.com/lucx-albx/Json_File/main/JSON/testo_mongodb.json"
+const API_MONGODB = "https://raw.githubusercontent.com/lucx-albx/Json_File/main/MongoDb/testo_mongodb.json"
 
 const carica_guida_home =()=>{
     let riferimento = document.querySelector(".ghome")
