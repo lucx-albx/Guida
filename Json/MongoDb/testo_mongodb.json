@@ -1,0 +1,37 @@
+[
+    {
+        "titolo": "Cos'è Mongodb",
+        "sotto_titolo" : null,
+        "corpo" : "MongoDB è un sistema di gestione di database non relazionale (NoSQL) open-source che si basa sul modello di archiviazione dei dati in formato documento. È stato progettato per essere flessibile, scalabile e adatto ad applicazioni moderne che richiedono una gestione efficiente dei dati non strutturati o semistrutturati.A differenza dei database relazionali tradizionali che utilizzano tabelle e righe, MongoDB organizza i dati in documenti BJSON (Binary JavaScript Object Notation) che possono essere annidati e consentono una rappresentazione più flessibile dei dati. I documenti possono variare nella struttura e possono essere facilmente modificati senza la necessità di uno schema fisso predefinito.",
+        "code" : null,
+        "link": null,
+        "image" : null
+    },
+
+    {
+        "titolo": "<a NAME='INMSH'></a>Installazione mongoshell",
+        "sotto_titolo" : null,
+        "corpo" : "Per gestire mongodb possiamo utilizzare mongo shell, che tramite dei comandi da terminale ci permettere di avere una completa gestione dei nostri database. Per iniziare scarica mongodb shell dal loro <a href='https://www.mongodb.com/try/download/shell' target='_blank'>sito ufficiale</a>. Una volta che lo abbiamo installato ogni volta, se siamo su windows, dovremmo andare: pc/TUO DISCO/programmi/mongoDb/server/6.0/bin aprire il terminale e digitare mongo.",
+        "code" : null,
+        "link": null,
+        "image" : null
+    },
+
+    {
+        "titolo": "<a NAME='CMSH'></a>Comandi utili per mongosh",
+        "sotto_titolo" : null,
+        "corpo" : "Per iniziare digita nble tuo terminale 'mongosh' per avviare la shell di MongoDB. Questo ti fornirà diverse informazioni, inclusi dettagli su quale indirizzo si trova il tuo database nella rete locale.Successivamente, digita 'show dbs' per visualizzare tutti i database disponibili. Per passare da un database all'altro, utilizza il comando 'use nomedb' sostituendo 'nomedb' con il nome del database desiderato.Puoi utilizzare 'db.getName()' per ottenere il nome del database in cui ti trovi attualmente.Per creare un database, digita 'use nomedb'. Si noti che userò 'utente' come esempio, ma puoi inserire il nome che preferisci.Per ottenere il contenuto del database, utilizza 'db.getCollectionNames()''. Questi sono gli equivalenti delle tabelle nel tuo database.Puoi utilizzare 'db.utente.insert({quello che vuoi})' per creare una collezione all'interno del database corrente. Tieni presente che 'insert' è deprecato e verrà eliminato.Per visualizzare il contenuto di tutte le collezioni, utilizza 'db.utente.find()'. Questa funzione può anche avere un parametro specifico, ad esempio 'db.utente.find({cognome: 'rossi'})', per restituire solo il documento con il cognome 'rossi'.Per inserire un singolo elemento, utilizza 'db.utente.insertOne({nome: 'Paolo', cognome: 'blu', fax: '21231'})'.Per inserire più elementi contemporaneamente, utilizza 'db.utente.insertMany([{quello che vuoi}])'.Per eliminare il primo articolo con il nome 'pizza', utilizza 'db.ordini.deleteOne({articolo: 'pizza'})'.Per eliminare tutti gli articoli con il nome 'pizza', utilizza 'db.ordini.deleteMany({articolo: 'pizza'})'.",
+        "code" : null,
+        "link": null,
+        "image" : null
+    },
+
+    {
+        "titolo": "<a NAME='INMDCMP'></a>Installazione mongodb",
+        "sotto_titolo" : null,
+        "corpo" : "Se per gestire il tuo database non vuoi usare la shell non preoccuparti che esiste pure mongodb gestibile tramite un'interfaccia gafica, come sempre per scaricarlo ci rechiamo sul loro <a href='https://nodejs.org/en/' target='_blank'>sito ufficiale</a>. Una volta installato possiamo instaurare una connessione schiaccianfo il tasto connetti e avremo in prima pagina url del nostro db in locale concudendo puoi gestire i tuoi database una volta instaurata la connessione e potrai anche definire delle regole per ogni singolo oggetto oppure per tutte le collections del tuo database.",
+        "code" : null,
+        "link": null,
+        "image" : null
+    }
+]

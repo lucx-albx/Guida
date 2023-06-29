@@ -3,6 +3,7 @@ const API_XML = "https://raw.githubusercontent.com/lucx-albx/Json_File/main/XML/
 const API_JSA = "https://raw.githubusercontent.com/lucx-albx/Json_File/main/JavaScript_Avanzato/testo_js_avanzato.json"
 const API_REACT = "https://raw.githubusercontent.com/lucx-albx/Json_File/main/React/testo_react.json"
 const API_JSON = "https://raw.githubusercontent.com/lucx-albx/Json_File/main/JSON/testo_json.json"
+const API_MONGODB = "https://raw.githubusercontent.com/lucx-albx/Json_File/main/JSON/testo_mongodb.json"
 
 const carica_guida_home =()=>{
     let riferimento = document.querySelector(".ghome")
@@ -188,6 +189,28 @@ const carica_guida_react =()=>{
                     insert += `</div>`
                     insert += `</div>`
                 }
+            }
+        })
+
+        riferimento.innerHTML = insert
+    })
+}
+
+const carica_mongo_db =()=>{
+    let riferimento = document.querySelector(".ghome")
+    let insert = ""
+
+    fetch(API_MONGODB)
+    .then((testo) => testo.json())
+    .then((data)=>{
+
+        data.map((elem, i)=>{
+            if(elem.titolo === null && elem.sotto_titolo !== null){
+                insert += `<h1 class="sub_tit d-flex justify-content-center mb-4 mt-4" data-aos="flip-right">${elem.sotto_titolo}</h1>`
+                insert += `<div class="contenitore-testo"><pre class="testo" data-aos="flip-down">${elem.corpo}</pre></div>`
+            } else if (elem.titolo !== null && elem.sotto_titolo === null){
+                insert += `<h1 class="tit d-flex justify-content-center mt-5 mb-5" data-aos="fade-right">${elem.titolo}</h1>`
+                insert += `<div class="contenitore-testo"><pre class="testo" data-aos="flip-down">${elem.corpo}</pre></div>`
             }
         })
 
